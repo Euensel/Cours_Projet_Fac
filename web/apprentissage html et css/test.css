@@ -1,0 +1,13 @@
+#p1{
+    color: aqua;
+}
+.p1{
+    color: blueviolet;
+}
+#pat{
+    font-style:italic ;
+}
+/*"p1" préceder de "#" va modifier l'élement qui porte l'attribut "id" au sein
+de sa balise ouvrante car elle a été mise comme valeur de l'attribut "id" dans notre code html
+"p1" précéder d'un point va modifier l'élement qui porte l'attribut "class" au sein
+de sa balise ouvrante car elle a été mise comme valeur de l'attribut "class

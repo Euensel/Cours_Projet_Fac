@@ -1,0 +1,13 @@
+p{
+    border: 1px solid black;
+}
+strong{
+    border: 1px solid black;
+}
+.div-para{
+    background-color: aquamarine;
+    font-weight: bold;
+}
+.span-para{
+    color: slateblue;
+}

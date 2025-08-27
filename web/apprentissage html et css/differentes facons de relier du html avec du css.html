@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>les bases html et css</title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            h1{
+                color: aliceblue;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 style="text-decoration:underline">je suis un titre</h1>
+        <p style="color: blue;">je suis un paragraphe</p>
+    </body>
+</html>
+<!--pour écrire du css nous devrons utiliser de sélevteurs et des propriétés 
+nous pouvons écrire du css à trois endroit différent
+1.dans l'élement "head" de notre code html on met un élement "style" dans lequel nous mettrons des sélecteurs et des propriétés
+dans ce cas le style css s'applique à toute la page 
+2.dans la balise ouvrant d'un élement auquel on veut donner un style particulier on va utiliser l'attribut "style" qui aura pour valeur 
+les proprietés css qu'on veut donner à notre élement html dans ce cas ci les modifications css ne s'appliqueront que dans l'élement choisi
+3.séparemment dans un autre dossier css ce qui est le plus conseiller car cela nous evitera si on a par exemple un grand site de 100 page html 
+de faire du css pour chacune des pages car avec cette méthode on peut appliquer le meme code css pour plusieurs page html différentes 
+pour ce faire on va créer notre dossier css dans un autre document puis on va placer un élement "link" dans notre élement "head" de notre code html
+cet élement prendra deux attributs "rel" avec valeur "stylesheet" et "href" qui aura pour valeur le nom du dossier css selon qu'il soit dans un meme dossier
+ou dans un dossier sous ou parent par rapport à notre dossier html
+-->

@@ -1,0 +1,40 @@
+<!--
+les formulaires permettent de collecter des données transmises par les users on va par exemple utiliser les formulaires html pour créer des formulaires d'inscription, de contact, etc...
+avec les formulaires nous touchons aux limites du html en effet le html va permettre de créer notre formulaire sans problème mais nous n'allons cependant ni pouvoir traiter les données sned par les users ni pouvoir les stocker pour ce faire
+il faudrait apprendre de nouveau langage informatique pour traiter les informations du coté serveur comme le php par exemple et pouvoir enregistrer les données efficacement avec un systeme de base de données (MySQL etc...)
+donc ici nous nous contenterons juste de créer notre formulaire html sans se préocupper ni du traitement ni de l'enregistrement des données
+lorsque l'on crée des formulaires c'est pour demander aux users de nous send des data donc les formulaires doivent etre sécuriser pour eviter les bug ou la fuite de données cependant cela se fera avec d'autre langage comme le php
+
+
+pour les formulaires on utilise l'élement "form" cet élément prend deux attribut obligatoire: 
+    method qui va préciser la methode d'envoie de donnée cet attribut prendra deux valeurs:
+        get : les données vont etre transitées par l'url et vont etre donc visible et vont avoir une limite sur la taille des données à send
+        post: pas de limite sur la taille des données et les données ne vont pas transiter de façon visible voilà pourquoi on l'utilisera quand on demande à l'utilisateur de saisir un mot de passe par exemple ou d'autres informations sensibles afin que les données ne soient pas visible 
+    action qui va servir à définir une page de traitement de données qui généralement est une page php(on définit le nom de la page de traitement)
+le html met à notre disposition une série d'élements pour créer différents un champ de données de notre formulaire: 
+    -input qui definit un champ de données pour l'utilisateur qui prendra un attribut "type" auquel on va donner comme valeur le type de donnée que l'utilisateur va entrer
+    -textarea permet de créer un champ de texte multi ligne servant à accueillir par exemple un commentaire ou une présentation d'un utilisateur
+    -label va décrire à l'utilisateur ce qu'il doit entrer dans chaque champ de formulaire, cet element label doit etre lié à un élément de formulaire grace aux attributs:
+        for pour le label et id pour l'element de formulaire auquels on doit donner la meme valeur afin de lier entre eux un label et un element de formulaire
+    On doit ajouter un attribut name pour chaque élement de notre formulaire qui nous permettre par la suite reconnaitre le contexte de chaque donnée envoyée par l'utilisateur afin de pouvoir les traiter efficacement
+    sans cet attribut nous recevrions des données mais ne saurions pas quoi en faire ne sachant pas à quel champ elles appartiennent
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <form method="post" action="traitement.php">
+        <label for="prenom">Entrez votre prenom</label>
+        <input type="text" id="prenom" name="prenom"><br>
+        <label for="prez">Une petite présentation</label>
+        <textarea name="presentation" id="prez"></textarea><br>
+        <input type="submit" value="Envoyer"> 
+    </form>
+    
+</body>
+</html>

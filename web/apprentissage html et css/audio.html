@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio html</title>
+</head>
+<body>
+    <h1>Média</h1>
+    <audio controls="controls" autoplay="autoplay" loop="loop" >
+        <source src="Ma_meilleure_ennemie.mp3">
+        <source src="Ma_meilleure_ennemie.ogg"> 
+    </audio>
+</body>
+</html>
+<!--
+pour insérer de l'audio en html on utilise l'élément audio cependant il existe plusieurs format audio et que aucun de ces formats ,'est reconnu de façon
+universelle par les vieilles versions de principaux navigateurs il va donc falloir installer la meme piste audio sous diiférents formats afin d'etre sur d'avoir
+une bonne prise en charge de notre fichier
+
+l'element audio contient un attribut obligatoire"control" qui va afficher les controls de base (lecture,mise en pause,retour au debut, gestion du son) elle a unique valeurpour valeur control
+cependant il n'est pas obligatoire de mettre cette valeur ontrols à l'attribut controls car il est automatique pris en charge par l'attribut controls mais il est quand meme recommandé de le faire
+et à l'interieur de notre element audio un element source qui va prendre en attribut "src" qui aura pour valeur le nom de notre fichier audio 
+
+on peut ajouter quelques fonctionnalité à notre audio en y ajouter des attributs facultatifs:
+    preload: permet de charger le fichier en meme temps que la page web et prendra 3 valeurs:
+        auto:permet de charger tout le fichier audio en meme temps que la page
+        meta-data: charger que les fichiers meta
+        none: le fichier ne sera pas charger
+    autoplay: n'a qu'une valeur autoplay lance l'audio automatiquement des qu'il est près
+    loop: n'a qu'une valeur loop et permet de repeter le fichier en boucle
+    muted: n'a qu'une valeur muted met le son du fichier sur 0
+
+
+
+-->

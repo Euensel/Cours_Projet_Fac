@@ -1,0 +1,46 @@
+/*
+la propriété position permet de positionner nos element html par rapport à d'autres éléments
+on utilise top left right et bottom pour positionner précisement nos element
+elle prend 4 valeurs différentes qui prenne des valeurs en px: 
+    static: valeur par défaut attribuer à la proprieté position ne prend pas de top left right et bottom
+    relative: permet de deplacer un element d'un certain nombre de pixel relativement à sa position de départ
+    fixed: permet à un element de toujours rester visible dans la page mm si le user scroll
+    absolute: permet de positionner un element de façon relative à son element parent auquel on a donné un positionnement spécifique(relative fixed ou absolute) si le positionnement n'est pas
+        prédefini l'element se positionne directement par rapport à la page
+cependant parfois avec le positionnement il se peut que deux element se chevauche pour donc decider de quel element sera au dessus de
+l'autre on va utiliser la proprité z-index l'element avec le z index le plus haut sera automatiquement au dessus
+*/
+.div{
+    background-color: orange;
+    position: relative;
+    
+
+}
+
+h1{
+    position: fixed;
+}
+.p1{
+    position: relative;
+    left: 150px;
+}
+.p2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.div2{
+    background-color: blue;
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    width: 500px;
+    height: 400px;
+    z-index: 100;
+}
+.meta{
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    z-index: 1000;
+}

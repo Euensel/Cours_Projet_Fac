@@ -1,0 +1,67 @@
+/*
+Si on veut que nos pages soient totalement responsives càd s'adaptent à tous les écrans de nos user on peut le faire :
+    -avec l'element meta et sa valeur viewport qui fait en sorte que la page s'adapte à la taille de l'écran mais cela n'est pas forcément parfait
+    -avec les media queries qui permettent d'adapter différentes propriétés à nos éléments html selon la taille de l'écran de nos visiteurs et le type de media utilisisé(selon que le visiteur utilise un écran, une imprimante...) ainsi on pourra supprimimé certaines propriétés, avoir différentes valeurs pour nos propriétés le tout selon la taille de l'écran 
+
+    on utilise d'abord le @media qui va déterminer le type de media où les déclarations css doivent s'appliquer dans la majorité des cas on utilisera le @media screen afin que ça s'applique à tous les medias(telephones,tablettes,pc..) mais y a aussi @madia print (pour les imprimantes ) ou encore @media speech (pour les ordi spéciaux qui vont à voix haute une page) et en fin @media all(tous les types de media)
+*/
+body{
+    background-color: green;
+    margin: 0px;
+    padding: 0px;
+}
+@media screen and (max-width:680px){
+    body{
+        background-color: orange;
+    }
+}
+@media screen and (min-width:681) and (max-width:1279px){
+    body{
+        background-color: blue;
+    }
+    h1{
+        font-size: 20px;
+    }
+}
+#div1,#div2,#div3{
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    border:3px solid #AAA ;
+    margin: 1%;
+
+}
+#div1{
+    background-color: orange;
+
+}
+#div2{
+    background-color: blue;
+}
+#div3{
+    background-color: green;
+}
+#pied{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    text-align: center;
+    background-color: #CCC;
+    
+}
+@media screen and (max-width:780px) {
+    #div1,#div2,#div3{
+        width: 100%;
+        border-right: none;
+        border-left: none;
+        margin-right:0px;
+        margin-left:0px;
+    }
+    #pied{
+        display: none;
+    }
+}
+@media screen and (orientation: landscape){
+
+}

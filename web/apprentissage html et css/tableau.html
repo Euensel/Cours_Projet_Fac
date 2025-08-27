@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau</title>
+    <link rel="stylesheet" href="tableau.css">
+</head>
+<body>
+    <h1>Les tableaux</h1>
+    <table>
+        <tr class="impair">
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Age</td>
+        </tr>
+        <tr class="pair">
+            <td>Giraud</td>
+            <td>Pierre</td>
+            <td>25</td>
+        </tr>
+        <tr class="impair">
+            <td>Joly</td>
+            <td>Pauline</td>
+            <td>24</td>
+        </tr>
+    </table>
+    <table class="t">
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Giraud</td>
+            <td>Pierre</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Joly</td>
+            <td>Pauline</td>
+            <td>24</td>
+        </tr>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Mois</th>
+                <th>Dépenses</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>SOMME</td>
+                <td>1350$</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Janvier</td>
+                <td>450$</td>
+            </tr>
+            <tr>
+                <td>Février</td>
+                <td>520$</td>
+            </tr>
+            <tr>
+                <td>Mars</td>
+                <td>380$</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="3">Prénom</th>
+            <th colspan="2">Adresse email</th>
+        </tr>
+        <tr>
+            <td>Eureka</td>
+            <td colspan="2">Deta</td>
+            <td colspan="2">eurekaeake2@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Pauline</td>
+            <td>Preddie</td>
+            <td>Anna</td>
+            <td>paulinemasoko@gmail.com</td>
+            <td>libolopauline@gmail.com</td>
+        </tr>
+    </table>
+    <table>
+        <caption>Listes des inscrits</caption>
+        <tr>
+            <th>Prénom</th>
+            <th>Adresse email</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Pierre</td>
+            <td>pierre@gmail.com</td>
+        </tr>
+        <tr>
+            
+            <td>giraud@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Pauline</td>
+            <td>Pauline@gmail.com</td>
+        </tr>
+    </table>
+</body>
+</html>
+<!--
+Pour créer un tableau en html on utilise l'élément "table" afin de definir le tableau puis un élément "tr" à l'interieur du table qui va definir une nouvelle ligne dans le tableau
+puis dans chaque tr des elements "td" qui vont correspondre aux différents cellules ou colones du tableau
+
+
+On peut structurer un tableau : 
+    créer une ligne d'en tete: pour ce faire on va utiliser un element "th" à la place de td
+    par defaut th met les en tete en majuscule mais on peut le modifier avec font-weight en css
+
+
+    si on veut créer un tableau assez long on peut le structurer de façon à le diviser en trois parties qui va contenir:
+        l'en tete 
+        le corps du tableau  qui va contenir le tableau en soi
+        le pied du tableau qui va servir à calculer des totaux ou rappeler des en tete si notre tableau est vraiment long
+        pour le faire on aura des elements specifiques qui seront placés avant le tr: 
+            thead: l'en-tete avec des cellules th
+            tbody : le corps du tableau cellules td
+            tfoot: le pied du tableau o, le place entre le thead et le tbody bien que cela ne semble pas logique sala bongo
+
+
+On peut réaliser différentes opérations sur nos tableaux en html: 
+    -Fusionner plusieurs cellules d'un tableau entre elle:
+        Pour fusionner deux cellules entre elles on va utiliser deux attributs html qui prendre comme valeurs le nombre de cellules à fusionner entre elles ces attributs sont:
+            colspan: combiner plusieurs cellules d'une meme ligne entre elles(collones)
+                pour expliquer l'exemple au dessus on a mis la valeur 3 à colspan dans l'en tete parceque PAuline a trois prenom donc on indique que prenom doit prendre l'espace
+                de 3 colonnes et on met 2 en valeur à colspan pour victor car Pierre n'a que deux prenom donc on indique que victor doit prendre 2 cases +celle de pierre ça fait 3 
+                en gros la valeur de colspan indique le nombre de colonne que prend un element
+            rowspan: combiner plusieurs lignes
+                pour expliquer l'emple on met 2 en valeur de rowspan pour indiquer que Pierre va occuper deux ligne donc par conscéquent le prochain tr doit avoir un cellule en moins car 
+                Pierre en occupe deux voila pourquoi on ne met que le mail pour le deuxieume tr car le pierre va occuper egalement la case prenom du deuxieme tr
+    -ajouter une légende à un tableau
+
+
+Pour ajouter une légende qui est une sorte de titre à notre tabeleau afin de savoir de quoi on parle avec l'élément "caption" qui doit absolument etre inserer apres la balise ouvrante de l'element
+table
+-->

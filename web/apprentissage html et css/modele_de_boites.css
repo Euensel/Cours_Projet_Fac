@@ -1,0 +1,125 @@
+/*
+tout élément va pouvoir etre formé par 4 boites:
+    une premiere qui contient le contenu de l'element html
+    une deuxieme qui contient le padding cad la largeur de l'element
+    une troisieme qui contient la bordure (border)
+    une quatrieme qui contient les marges exterieurs (margin
+*/
+/*
+tout element html possede une largeur et une hauteur sa hauteur par defaut est defini par son contenu tandis que 
+sa largeur par defaut est avant tout determiné par son type ceux de type blocks occuperont par defaut tout l'espace disponible tandis que inline
+slmt celle necessaire à son contenu
+pour modifier la hauteur on utilise "height" et "width" pour la largeur ils prendront des valeurs absolues ou relatives ou auto dans ce cas elles seront calculer automatiquement par le navigateur
+les valeurs relatives en % prendront le % indiqué de l'élément parent
+*/
+/*
+la bordure d'une page se situe entre la margeur et le padding(largeur) elle est determinée par la propriété "border" qui prend 3 valeurs 
+d'abord la largeur en px ou % ensuite le style puis en fin la couleur de la bordure 
+elle peut egalement etre determinée avec :
+    border-width:largeur
+    border-style:le style
+    border-color:la couleur
+une bordure peut avoir 8 style différent:
+    solid: bordure normale ou slide
+    dooted: bordure en pointillets 
+    dashed: bordure en tirets
+    double: bordure double
+    groove: ajouter effet 3D
+    ridge: ajouter effet 3D
+    inset: ajouter effet 3D
+    outset: ajouter effet 3D
+on peut definir une bordure dans different cotés de notre élément
+    border-bottom: en bas
+    border-right : à droite
+    border-left: à gauche
+    border-top: en haut
+pour creer des bordures arrondi on va utiliser une propriété border-radius en plus des propriétés border
+elle prendra des valeurs absolues on peut determiner une bordure arrondi:
+    en bas à gauche: border-bottom-left-radius
+    etc.. en suivant la mm logique
+
+*/
+/*
+nous avons les marges interieures(padding) qui se situe entre la bordure et l'element en soi si on definit une couleur de
+fond à notre element elle s'applique egalement au padding et les marges exterieures (margin) se trouve en dehors d'un element
+[marges interieures]:
+    avec la propritée padding qui prend des valeurs relatives ou absolues
+    sert principalement à repousser le contenu de sa bordure
+    on peut definir des marges interieures de differents cotés :
+        padding-top: marge en haut
+        padding-bottom: en bas
+        padding-left: à gauche
+        padding-right: à droite
+    on peut egalement le faire avec un seul padding come suit: 
+        padding: 100px 50px 60px 80px
+        la premiere valeure est pour le haut puis bas puis droite puis gauche
+    on peut enchore: 
+        padding: 100px 70px
+        la premiere pour haute et basse la deuxieme gauche et droite
+
+[marges exterieures]: 
+    proprieté margin valeur absolues, relatives, inherit ou auto (utile pour centrer hozirontalement un element par rapport à un element parent)
+    sert à repousser la bordure de la page
+    on peut egalement le faire avec un seul margin come suit: 
+        margin: 100px 50px 60px 80px
+        la premiere valeure est pour le haut puis bas puis droite puis gauche
+    on peut enchore: 
+        margin: 100px 70px
+        la premiere pour haute et basse la deuxieme gauche et droite
+    pour centrer : 
+        d'abord notre élement doit avoir une largeur définie(weight) puis on va mettre 0px en premiere valeur du margin et auto comme deuxieme valeur
+        ce qui aura pour effet de centrer
+*/
+.div1{
+    background-color: #0AA;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border: 20px solid #0C0;
+    margin: 0px auto;
+    border-radius: 100px;
+}
+.p1{
+    height: 100px;
+    width: 400px;
+    padding: 60px;
+    background-color: #FA0;
+    border: 5px solid red;
+    border-top-left-radius:50px;
+    border-bottom-right-radius: 70px;
+
+}
+.p2{
+    height: 5%;
+    width: 50%;
+    border: 5px dashed green;
+}
+.div2{
+    background-color: #AAA;
+    border: 50px ridge #000;
+    padding: 140px;
+
+}
+.p3{
+    border-color:blue;
+    border-style: groove;
+    border-width: 50px;
+    padding-top: 120px;
+    padding-left: 50px;
+    
+}
+.p4{
+    border-top-width: 8px;
+    border-top-style: dotted;
+    border-top-color: #00F;
+}
+.div3{
+    border: 50px solid blue;
+    padding: 40px 60px 70px 90px;
+    margin: 70px;
+}
+.p5{
+    background-color: #0C0;
+    width: 100px;
+    margin: 0px auto;
+}

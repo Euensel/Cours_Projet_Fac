@@ -1,0 +1,18 @@
+/* les selecteurs simples sont des selecteurs qui portent le meme nom que des element html (ex:h1,p)
+
+*/
+h1{
+    font-size: 80px;
+    color: darkblue;
+    font-style: italic;
+    font-weight: lighter;
+
+}
+p,h2{
+    color: brown;
+    font-weight: bold;
+}
+img{
+    width: 400px;
+    height: 300px;
+}

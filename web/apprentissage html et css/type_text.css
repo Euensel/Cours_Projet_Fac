@@ -1,0 +1,44 @@
+/*
+-text-align: permet de centrer un texte ( gauche droite ou au milieu)
+-text-transform: met le texte en majuscule (uppercase), miniscule(lowercase) première lettre de chaque mot en majuscule
+(capitalize)
+-text-decoration: permet d'ajouter ou d'enlever des decoration à nos text 
+    none : retirer une decoration par defaut(ex:le soulignement des lien par defaut)
+    underline: souligner text
+    line-though:barrer un text
+    overline:surligner(trait au dessus du texte)
+-text-indent:indenter un text accepte des valeurs absolues(px ou pt) et relatives(% ou em) à noter que une valeur negative 
+    sur un paragraphe tout à droiter pour essayer de le ramener vers la gauche ne fonctionnera pas mais dans tous les autres cas elle fonctinnera
+-text-shadow: permet de creer des ombres autour de nos textes afin que celles ci se detacher de l'arrière plan
+    on donne 4 valeurs en px ou %/
+        la première valeur correspond au déplacement horizontale de l'ombre si elle est positive elle va à droite et à gauche si elle est négative
+        la deuxième déplacement verticale positive vers le bas negative vers le haut
+        troisieme le rayon sur lequel l'ombre va se propager
+        la dernière la couleur de l'ombre
+*/
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:underline;
+    text-shadow: 5px 4px 2px blue;
+    
+}
+p{
+    text-transform:lowercase;
+    text-decoration: overline;
+    text-indent:100px  ;
+}
+.para{
+    text-transform: capitalize;
+    text-decoration: line-through;
+    text-indent: -10%;
+}
+#meta{
+    text-align:right;
+    text-transform: lowercase;
+    
+}
+a{
+    text-decoration: none;
+    
+}

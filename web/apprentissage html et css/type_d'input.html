@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <form method="post" action="traitement.php">
+        <label for="prenom">Entrez votre prenom</label>
+        <input type="text" id="prenom" name="prenom"><br>
+        <label for="pass">Entrez un mot de passe</label>
+        <input type="password" id="pass" name="pass"><br>
+        <label for="naissance">Date de naissance</label>
+        <input type="date" id="naissance" name="naissance"><br>
+        <label for="prez">Une petite prsentation</label>
+        <textarea name="presentation" id="prez"></textarea><br>
+        <label for="email">Entrez votre email</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="site">Entrez votre site</label>
+        <input type="url" id="site" name="site"><br>
+        <label for="tel">entrez un numéro</label>
+        <input type="number" id="tel" name="tel"><br>
+        
+        <input type="radio" id="homme" name="sexe" value="homme">
+        <label for="homme">Un homme</label><br>
+        <input type="radio" id="femme" name="sexe" value="">
+        <label for="femme">Une femme</label><br>
+        Majeur ou mineur?<br>
+        <input type="radio" id="mineur" name="age" value="mineur">
+        <label for="mineur">Mineur</label><br>
+        <input type="radio" id="majeur" name="age" value="majeur">
+        <label for="majeur">Majeur</label><br>
+        Quels sport pratiquer-vous?<br>
+        <input type="checkbox" name="sport" id="natation" value="natation">
+        <label for="natation">Natation</label><br>
+        <input type="checkbox" name="sport" id="course" value="course">
+        <label for="course">Course à pied</label><br>
+        <input type="checkbox" name="sport" id="football" value="football">
+        <label for="football">Football</label><br>
+        <input type="submit" value="Envoyer"> 
+    </form>
+</body>
+</html>
+<!--
+L'attribut type de l'élement input peut prendra les valeurs suivantes:
+    -text:permet de créer un champ de saisi monoligne dans lequel l'user entrera les données
+    -password: crée un champ de saisi sécuriser (dans ce champ ce que le user saisi ne sera pas afficher mais remplacer par des * ou des points)
+    -date: crée un champ pour saisir des dates comme les birthday for example
+    -email: champ pour saisir un email
+    -url: crée une zone de saisi acceptant une url
+    -number: créer une zone de saisi n'acceptant que des nombres
+    -radio: crée un bouton de type radio qui va demander au user de choisir une option et une slmt dans une liste proposée, pour chaque choix possible il faudra un nouveau input type radio dans ce cas chacune de zone de choix doivent posséder le meme attribut name afin que l'on sache qu'il sagit de la meme zone de choix
+        donc les différents choix possible seront distinguer par l'attribut "value" on place le label apres input afin d'avoir le bouton radio aligné avant le texte descriptif
+    -checkbox: permet également de donner des choix aux users sauf qu'elle est moins rescriptive càd le user peut choisir aucun choix un seul choix ou plusieurs choix tout comme radio on va avoir le meme name mais des values différents
+    -submit : permet de créer un bouton d'envoie du formulaire, les données seront envoyer via la méthode précisée dans l'attribut method de l'element form à l'adresse précisée en valeur de l'attribut action
+    il ne nécessite pas de name juste un attribut value qui sera affiché au sein du bouton
+-->

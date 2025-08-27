@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>les liens internes et externes</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>page de départ</h1>
+        <p>lien vers la <a href="milieu.html" target="_blank"> page milieu</a></p>
+        <p>lien vers la <a href="sous/sous.html">page sous</a></p>
+        <p>lien vers la <a href="../parent.html">page parent</a> </p>
+        <p>lien vers la <a href="sous1/sous2/sous sous.html">page sous sous</a></p>
+        <p>lien vers la <a href="parent parent.html">page parent parent</a></p>
+</html>
+<!--si la page de départ et celle d'arrivée sont dans un meme dossier on mettre le nom du dossier
+de la page d'arrivée comme reférence de notre attribut href 
+si la page d'arrivée se trouve dans un dossier sous par rapport à la page de départ on va indiquer
+le nom du dossier sous suivi d'un slash puis du nom de dossier de la page d'arrivée comme ref de notre
+attribut href
+si la page d'arrivée se trouve dans un dossier parent par rapport à la page de départ on va indiquer 
+deux points suivi d'un slash puis du nom de dossier de la page de d'arrivée comme ref de notre attribut href
+-->
+<!--l'attribut "target" nous permet d'afficher la page d'arrivée dans un nouvel onglet tout en gardant la page
+de départ ouverte elle doit etre reférencer avec "_blank"
+-->

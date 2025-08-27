@@ -1,0 +1,38 @@
+/*
+les pseudo elements css permettent de modifier l'apparence d'une partie slmt d'un ou de plusieurs elements html ou d'ajouter du contenu au debut ou a la fin d'un element html
+ils sont reconnaissable par leur synthaxe avec deux points au debut "::"
+les pseudo elemnts sont: 
+    ::first-letter selectionne la première lettre d'un element
+        il est important de noté que ce pseudo element ne fonctionne que sur les elements de type block et qu'il n'accepte pas toutes les propriétés mais peut accepter les proprietés liées: à la police (font), à la couleur, backgroud,modeles de boites,text decoration et text transform, align,line-height,float et clair 
+        cette liste n'est pas exostive mais c'est la plupart des propriétés qui seront utilisées
+        
+    ::first-line selectionne la premiere ligne d'un element
+        idem que first_letter
+    ::selection selectionne la partie d'un element deja selectionné par un user soit par un double clique soit avec la souris
+        supporte les propriétés color et backgroud ainsi que curser et art-clyde que nous verrons after
+        preciser egalement une version prefixer avec moz car firefox supporte mal ce pseudo element
+    ::before inserer du contenu au debut d'un element html 
+        va etre utiliser avec la propriété content qui va permettre d'ajouter toute sorte de contenu (texte,image...)
+    ::after inserer du contenu à la fin d'un element html
+        idem
+*/
+p::first-letter{
+    font-size: 30px;
+    color: aqua;
+    
+}
+p::-moz-selection{
+    background-color: orange;
+}
+p::selection{
+    background-color: orange;
+}
+div{
+    border: 1px solid black;
+}
+div::before{
+    content: "Du texte au début de mon div, avec before";
+}
+div::after{
+    content: url("coucher_de_soleil.jpg");
+}

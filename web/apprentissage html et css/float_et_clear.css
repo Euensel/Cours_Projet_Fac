@@ -1,0 +1,34 @@
+/*
+float: permet de faire flotter des elements html à gauche ou à droite de la page donc on l'utilise avec left ou right 
+    les elements suivant un element flottants seront positionner à coter de lui par defaut cependant les elements avec la proprieté position va ignorer float
+    un element flotte toujours dans les limites de son element parent conteneur
+clear: permet d'annuler le placement automatique à un coté d'un element flottant on doit preciser left ou right ou both selon là où se trouve l'element duquel on veut annuler le comportement par defaut
+overflow: lorsque un element flottant est trop grand celui ci de depasse son conteneur donc on utilise overflow pour palier à cela
+    ses valeurs sont: 
+        visible: rien n'est coupé rien n'est caché (valeur par defaut
+        hidenn: ce qui depasse est couper
+        sroll: cache ce qui depasse mais permet de pouvoier scroll pour voir ce qui est cacher
+        auto: laisse le navigateur décider par lui mm
+        initiale et inherit
+
+*/
+div{
+    background-color: orange;
+    width: 500px;
+    height: 40px;
+    z-index: 100;
+    float: right;
+    clear: both;
+    overflow: scroll;
+}
+h1{
+    z-index: 1000;
+    float: left;
+}
+.p1{
+    left: 50px;
+    float: right;
+}
+.p2{
+    clear: right;
+}

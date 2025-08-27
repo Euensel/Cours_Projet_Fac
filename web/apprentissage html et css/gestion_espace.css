@@ -1,0 +1,21 @@
+/*
+line-height: en px ou % definit l'espace ou l'ecartement entre deux ligne de text
+letter-spacing: px ou % l'espace entre différentes lettre d'un texte
+word-spacing: espace entre les mots d'un texte
+*/
+.p1{
+    line-height: 20px;
+
+}
+.p2{
+    line-height: 40px;
+}
+.p3{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+.p4{
+    line-height: 35px;
+    letter-spacing: -10px;
+    text-align: right;
+}

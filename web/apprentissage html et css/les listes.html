@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>les listes en html</title> 
+       <meta charset="utf-8">
+    </head>
+    <body>
+        <ul>
+            <li>pomme</li>
+            <li>vélo</li>
+            <li>dinde</li>
+        </ul>
+        <ol>
+            <li>INTRODUCTION</li>
+            <li>partie 1</li>
+            <li>partie 2</li>
+            <li>conclusion</li>
+        </ol>
+        <ol type="I">
+            <li>introduction</li>
+            <li>partie 1</li>
+            <li>partie 2</li>
+            <li>conclusion</li>
+        </ol>
+        <dl>
+            <dt>HTML</dt>
+            <dd> html signifie hypertext markup language</dd>
+        </dl>
+        <ol>
+            <li>
+                partie 1
+                <ul>
+                    <li>définition</li>
+                    <li>exemples</li>
+                </ul>
+            </li>
+            <li>
+                partie 2
+                <ul>
+                    <li>
+                        definition 
+                    </li>
+                    <li>auteur</li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>
+<!--en html nous avons 3 types de listes différents:
+ les listes non ordonnées, les listes ordonnées, et 
+ les listes de définition ou de description
+ -->
+<!-- les listes non ordonné que l'on utilisera quand on 
+ a pas besoin que ça s'affiche comme 
+une suite logique donc ( 1. 2. 3.) donc à l'affichage 
+nous aurons des pts noirs pour séparer les éléments de la 
+liste et pour définir la liste on utilise l'élément"ul" 
+puis "li" pour chaque élement de la liste 
+-->
+<!--les listes ordonnées sont eux utiliser pour définir des 
+élements comme un sommaire donc une suite logique (1. 2. 3.)
+pour se faire on utilise l'ément "ol" puis un élement "li" pour 
+chaque élement de la liste
+-->
+<!--pour remplacer le style de numerotation d'une liste ordonnée 
+on utilise l'attribut "type" puis on définie le style de numérotation 
+ex:type="I"
+    type="a"
+    type="A"
+-->
+<!--les listes de définition ou de description qui seront utiliser pour 
+nous permettre de lister des termes et d'ajouter des définition ou des 
+descriptions pour chacun de ces termes on va donc utiliser un élement "dl"
+pour (description list) dans lequel on mettra un élement "dt"(description terme)
+pour le terme à definir ou décrire donc et ensuite suivi d'un élément "dd" ( definition
+ou descrition) pour la définition ou la description en soi
+-->
+<!--nous pouvons également imbriqués des listes non ordonné dans des listes ordonnées et
+ vice versa pour se faire on va mettre l'élement "ul " à l'interieur de l'élement "li" 
+ qui est lui mm à l'interieur de "ol"
+-->

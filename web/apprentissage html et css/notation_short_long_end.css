@@ -1,0 +1,44 @@
+h1{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Verdana,sans-serif;
+
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+    background-color: #FFF;
+    background-image: url("coucher_de_soleil.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top left;
+
+}
+p{
+    font:italic normal 16px/24px verdana,sans-serif;
+    padding: 20px 15px 0px 5px;
+    border: 5px solid blue;
+    margin: 20px 15px 10px 5px;
+    background: #FFF url("coucher_de_soleil.jpg") no-repeat scroll top left;
+}
+/*
+pour les premières notations short-end que nous il y a ceux de propriétés: 
+    font: les long-end (font-style,font-weight,font-size,line-height,font-family) peuvent etre notés plus simplement en ecrivant juste "font" puis en séparant différentes valeurs des font par un espace
+        sauf pour le font-size et line-height sui seront separer par un /
+    modeles de boites: padding et margin avec elur long-end (top,right,bottom,left) peuvent juste etre noté par un simple padding ou margin avec 4 valeurs séparer par un espace chaque valeurs représentent 
+        (top,right,bottom,left) et border (width,style,color) avec un simple border avec 3 valeurs separées par un espace
+    backgroud: regroupe (color,image,repeat,attachment,position) plus que de tout noter en long-end on peut juste le faire en short-end avec un seul backgroud on chaque valeur (color,image,repeat,attachment,position)
+        dans cet ordre en les séparant par un espace
+*/

@@ -1,0 +1,37 @@
+/*
+-Nous avons d'abord le selecteur css universel representer par "*" qui permet de selection tous les elements html d'un coup (meme body et html)
+
+-y a aussi la virgule "," quipermet de cibler deux ou plusieurs selecteurs en meme temps afin de leur donner le meme style (ex:h1,p{})
+
+-On peut aussi cibler précisement un element dans un  autre en les metants à la suite séparés par un espace (ex: div p {}) cela aura pour effet de modifier uniquement les p qui sont dans notre div
+
+-On peut egalement utiliser le selecteur "+" qui cible l'element de meme niveau et qui suit directement le premier element de l'addition (ex: div+p cible le paragraphe en dehors du div et qui le suit directement )
+
+-le selecteur ">" permet de cibler directement les elemnts enfants d'un autre element (ex: div > h2 permet de cibler tous les h2 dans mes div)
+
+-Nous avons aussi les selecteurs css d'attributs qui permettent de cibler des elements avec des attributs: 
+    le premier est celui qui cible un element avec un attribut en particulier nous metrons cet attribut entre crochet "[]" jutse apres le selecteur sque nous ciblons(ex: div[class] cible tous les div possédant un attribut class)
+    si cette fois je précise (ex:div[class="div1"] cela cible uniquement les div avec une class div1)
+*/
+*{
+    border: 1px solid black;
+}
+h1,p{
+    font-family: verdana,sans-serif;
+}
+div p{
+    color: blue;
+}
+div + p{
+    color: purple;
+}
+div > h2{
+    color: red;
+}
+div[class]{
+    background-color: orange;
+}
+div[class="div2"]{
+    height: 400px;
+    width: 400px;
+}

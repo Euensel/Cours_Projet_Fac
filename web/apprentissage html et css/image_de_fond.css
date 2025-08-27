@@ -1,0 +1,33 @@
+/*
+pour changer la couleur de fond on utilise backgroud-color qui prend des valeurs: 
+    nom de couleur
+    hexadécimales
+    rgb
+    rgba(opacity)
+*/
+/*
+backgroud-image: pour mettre une image en fond on utilise la proprieté backgroud-image qui prend en valeur l'adresse de l'image
+    ex: backgroud-image: url("adresse de l'image");
+backgroud-size: lorqu'une image de fond est trop petite pour une page on utilise cette propriété pour determiner sa nouvelle hauteur et largeur
+    on peut donner des valeurs absolues ou relatives mais en cas de valeur ralatives il faut savoir qu'il prend un % de l'element auquel il est appliqué et non pas un % de s taille originale donc il vaut mieux preciser
+    uniquement une largeur de l'image et la hauteur sera automatiquement redimensionner (ex: backgroud-size: 100%;)
+backgroud-repeat: gere la repetition d'une image :
+    verticalement: repeat-y
+    horizontalement: repeat-x
+    dans les deux sens: repeat
+    pas du tout: no-repeat
+backgroud-attachment: permet de fixer ou pas le fond va prendre deux valeurs
+    fixed: fixer l'image afin qu'elle ne bouge pas quand on scroll
+    scroll: l'image reste dans le flux donc au dessus quand on scroll
+backgroud-position: permet de positionner plusieurs ou une image de fond généralement on s'en sert avec la proprieté backgroud-repeat elle pred comme valeurs des mots clés comme top right par exempke
+    mais egalement deux valeurs en px (ex: backgroud-position: 200px 400px; ou backgroud-image: bettom right;)
+pour utiliser plusieurs image en fond on va juste placer une virgule pour chaque propriétés utilisées 
+*/
+body{
+    background-image: url("coucher_de_soleil.jpg"),url("images.jpeg");
+    background-size: 50%,30% ;
+    background-repeat: no-repeat,no-repeat;
+    background-attachment: fixed,scroll;
+    background-position: top left,top right;
+
+}

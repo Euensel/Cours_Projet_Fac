@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+    <link rel="stylesheet" href="mise_en_forme_formulaire.css">
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <form method="post" action="traitement.php">
+        <fieldset id="section1">
+            <legend>Informations personnelles : </legend>
+            <label for="prenom">Entrez votre prénom : </label>
+            <input type="text" name="prenom" id="prenom"><br>
+            <label for="nom">Entrez votre nom : </label>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="pseudo">Entrez votre pseudonyme : </label>
+            <input type="text" name="pseudo" id="pseudo"><br>
+        </fieldset>
+
+        <fieldset id="section2">
+            <legend>Informations supplémentaire</legend>
+            Quels sont vos loisirs?<br>
+            <input type="checkbox" name="hobbies" value="informatique" id="inf">
+            <label for="inf">Informatique</label>
+            <input type="checkbox" name="hobbies" value="sport" id="sport">
+            <label for="sport">Sport</label>
+            <input type="checkbox" name="hobbies" value="voyages" id="voyages">
+            <label for="voyages">Voyages</label>
+            <input type="checkbox" name="hobbies" value="musique" id="musique">
+            <label for="musique">Musique</label>
+            
+            <br>
+        </fieldset>
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
+<!--
+pour organiser notre formulaire on va déjà utiliser l'élement:
+    -fieldset qui permet de regrouper certains elements de formulaire html entre eux afin de créer différentes sections pour notre formulaire donc le structurer
+    -legend à l'interieur de fieldset qui permet de donner un nom à chaque section
+-->

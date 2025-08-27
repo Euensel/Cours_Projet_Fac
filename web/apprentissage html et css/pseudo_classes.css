@@ -1,0 +1,40 @@
+/*
+les pseudo classes css permettent de changer les styles d'un element selon son etat cad de façon quasi dynamique (par exemple afficher un paragraphe en gras lorsque le user passe la souris dessus ou encore changer la couleuyr d'un lien lorsque celui-ci a été cliqué)
+elles commencent tous par deux points ":"
+
+on va commencer par (:link,:visited,:hover:active) qui sont très souvent utilisés pour des liens mais peuvent également etre utilisés pour un element p:
+    :link styliser un lien non visité
+    :visited styliser un lien une fois que celui a été visité
+    :hover modifier un element lorsque on passe le curseur dessus
+    :active modifie l'aspect d'un lorqu'on clique une fois dessus
+à noter que lorsqu'on utilise toutes ces psuedo classes pour un meme elelement on doit suivre l'odre ci haut
+
+les pseudo classes suivantes sont first-child et last-child qui permettent respectivement de selectionner le premier element et le dernier element enfant d'un certain type par rapport à l'element parent en gros first-child cible tous les elements html qui sont le premier element d'un element 
+    parent (body,div...) et last-child le dernier(ex:p:last-child cible tous les elements p qui sont derniers elements d'un element parent
+
+nous avons ensuite la pseudo classe nth-child() on mettra entre les parenthèses soit un nombre soit un mot clé qui va cibler certains element enfant d'un element html
+    exemple de mot clé 
+        even : pair 
+        odd: impair
+        en gros cela cible tous les elements enfants pair on impair
+    si on met un nombre exmple 3 cela cible le troisieme element d'un eleent parent
+*/
+
+h1:hover{
+    color: red;
+}
+a:link{
+    color: blue;
+}
+a:visited{
+    color: green;
+}
+p:first-child{
+    color: orange;
+}
+p:last-child{
+    color: brown;
+}
+h2:nth-child(2){
+    color: purple;
+}

@@ -1,0 +1,12 @@
+le moteur de stockage est ce qui va definir différent algorithme pour le stockage
+MyISAM(non trasactionnel)
+InnoDB(trasactionnel)
+
+MyISAM
+>beacoup de lecture
+>efficace pour la recherche
+
+InnoDB
+>beacoup d'écritures
+>sécuriser les données
+>cohérence entre les données (tables)

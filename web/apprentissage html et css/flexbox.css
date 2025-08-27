@@ -1,0 +1,57 @@
+body
+{
+    background-color: #EEE;
+    margin: auto;
+    width: 100%;
+}
+.container
+{
+    background-color: rgb(113,155,245);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.cont-item
+{
+    background-color: rgb(241,131,131);
+    border: 1px solid black;
+    
+    
+}
+/*
+    Travailler sur le conteneur
+        display:flex|inline-flex
+
+        flex-direction:modifier l'orientation des elements de notre conteneur avec les propriétés :row(ligne)|colum(colonnes)|row-reverse(lignes inversés)|colum-reverse(colonnes inversées)
+        flex-wrap: permet de couper la ligne pour en créer une deuxième si les elements du conteneur sont trop nombreux et donc depasses la limites de la page
+            nowarp (par défaut)
+            wrap(créer une deuxieme ligne)
+            wrap-reverse(créer une deuxieme ligne à l'envers
+        flex-flow: <direction> <wrap> (row wrap par défaut) prend les valeurs de direction et wrap
+
+        justify-content: reparti les elements sur l'axe principal 
+            flex-start (tous les élements au debut)
+            flex-end (tout à la fin)
+            center (tout au milieu)
+            space-between (espace entre elements)
+            space-aroud (espace partout autour des elements)
+            space-evenly (avoir que des espaces egaux)
+        align-items: axe secondaire
+            stretch : s'etire sur tous l'espace disponible
+            flex-start : met tout au debut
+            flex-end: tout à la fin
+            center: tout centrer
+            baseline
+    sur les object
+        order:<int> .order1{order:1} plus l'order est petit plus l'element cibler sera afficher en premier
+        flex-grow: determine l'agrandissement <int> .object1{flex-grow:2) determine l'espace d'un element cibler par rapport à l'espace disponible si tous les elements ont le meme nombres ils auri-ont tous le meme espace
+        flex-shrink: determine le retrécissement 
+        flex-basics: met la taille initiale de l'element avant toute modification <length> en px
+        flex: <grow> <shrink> <basics>
+        align-self: permet de changer un element seulement
+            flex-start
+            flext-end
+            center
+            stretch
+            baseline
+*/

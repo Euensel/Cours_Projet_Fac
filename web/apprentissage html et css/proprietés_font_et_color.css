@@ -1,0 +1,74 @@
+/*
+font-size: modifier la taille de la police du texte
+font-style:modifier le style du texte
+font-weight:modifier le poids du texte
+*/
+
+/*
+font-size accepte deux types de valeurs de type absolues (en px ou en PT) les tailles absolues 
+sont fixées cad qu'elle ne change pas et de type relative(en% ou en em ou en ex) l'interet des valeurs relatives 
+est qu'elles vont s'adapter relativement à certains parametres cad soit par rapport aux preferences enregistrées 
+dans le navigateur par un visiteur soit par rapport au parametre d'un dossier parent cependant les tailles relatives sont 
+moins faciles à gerer dans la mise en forme d'une page car sans précaution un texte peut depasser la partie d'une page
+elle peut egalement prendre une valeur "inherit" cad un element cibler qui va prendre les proprites d'un dossier parent
+*/
+
+/*
+font-style peut prendre 4 valeurs differentes:
+    normal
+    italic
+    oblique
+    inherit
+*/
+
+/*
+font-weight definit le poids ou l'epaisseur d'une police elle peut prendre differentes valeurs:
+    normal(correpond à 400)
+    lighter(très fine)
+    bold(en gras correspond à 700)
+    bolder(très gras)
+    initial(propriete de la valeur d'origine)
+    inherit
+    egalement une centaine (entre 100 et 900)
+*/
+
+/*
+la propriété color peut prendre comme valeur le nom des couleurs en anglais mais si on veut etre moins limité
+
+on peut directement former une coleur à partir des representations en hexadecimal on commence par un #puis on met 
+les deux premiers chiffres reprentes l'intensité de rouge(FF pour tres vif et 00 pour moins vif) puis les deux seconds
+l'intensité de vert puis en fin l'intensité de bleu
+ex:color:#FF0000;
+
+On peut utiliser egalement un systeme RGB pour creer des coleurs(255 intensité maximale et 000 intensité minimale)
+ex:color: RGB(255,000,000);
+on peut ajouter un 4eme parametre à RGB(255,000,000,0.6) qui marquera l'opacité entre 0 et 1 (0 pour un texte totalement transparent et 1 
+un texte totalement opaque) une autre maniere est d'utiliser le parametre opacity (entre 0 et 1 comme valeur)
+*/
+body{
+    background-color: #AA67AA;
+}
+h1{
+    font-size: 100px;
+    font-style:italic; 
+    font-weight: 400;
+    color: #FF0000;
+}
+p{
+    font-size: 150%;
+    font-style: oblique;
+    font-weight: bold;
+    color: #00FF00;
+   
+}
+.para{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    font-style: normal;
+    font-weight: 900;
+    color: #0000FF;
+    opacity: 0.5;
+}
+#meta{
+    color: RGB(255,000,000,1);
+}

@@ -1,0 +1,9 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+/*
+font-family modifie la police si le nom de la police choisi contient un espace on met des ('') ou("")
+et au cas où un navigateur n'arrive pas à lire la premiere police on la separe d'une virgule des autres
+comme ça le navigateur va tester la premiere puis la deuxieme jusqu'à trouver une police qu'il peut lire
+
+*/

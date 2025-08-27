@@ -1,0 +1,50 @@
+/*
+pour ajouter des bordures à un tableau préalablement créer en html on utilise la propriété border dans un selecteur td
+si on fait slmt cela on aura des cases séparée pour chaque case donc pour faire en sorte de les relier on va utiliser la propriété 
+border-collapse et sa valeur collapse cette fois dans le selecteur table
+on peut également ajouter un padding dans le selecteur td afin d'espacer les elements pour une meilleur lecture
+on peut aussi ajouter une couleur de fond
+on peut si on le souhaite définir différentes couleurs de fond selon qu'une ligne soit paire ou impaire pour ce faire on peut procéder de deux manière: 
+    -avec des class en html paire dans chaque ligne paire et impair dans chaque ligne impair afin de les ciblés plus facilement en css
+    -avec des pseudos classes even pour pairs et odd pour impair mais nous entreront plus en detail en voyant les pseudo classe 
+*/
+
+/*
+si notre tableau en html est structuré en séparant les en tete des autres avec th on doit egalement ajouter des bordures à notre th
+par defaut th met les en tete en majuscule mais on peut le modifier avec font-weight en css
+
+pour cibler les différentes parties on cible le selecteur thead et tfoot cependant puisque les pseudo classes sont plus précises que les selecteurs simples 
+thead et tfoot on doit utiliser des selecteurs css complexes que nous veront plus tard thead th et tfoot td
+*/
+table{
+    border-collapse: collapse;
+}
+thead th,tfoot td{
+    background-color: RGB(110,200,40);
+    color: #FFF;
+    text-transform: uppercase;
+}
+td,th{
+    border: 1px solid black;
+    padding: 10px;
+}
+th{
+    background-color: RGB(110,200,40);
+    font-weight: normal;
+}
+.pair{
+    background-color: orange;
+}
+.impair{
+    background-color: #069;
+}
+tr:nth-child(even){
+    background-color: orange;
+}
+tr:nth-child(odd){
+    background-color: blue;
+}
+.t{
+    float: right;
+    
+}

@@ -1,0 +1,25 @@
+/*
+la propriétén display permet de modifier le type d'un element html(block ou inline)
+[différentes valeurs]
+    inline: permet de modifier le type d'un élément block pour se comporter comme un élement de type inline
+    block: permet de modifier le type d'un élément inline pour se comporter comme un élement de type block
+    inline-block: permet d'emprunter certaine proprités de type block et inline l'element en soi sera de type inline mais son contenu de type block
+        il permet par exemple d'afficher deux paragraphe dans une bordure avec une largeur 
+    none: permet de ne pas afficher un element
+*/
+p{
+    display: inline;
+    border: 1px solid black;
+}
+span{
+    border: 1px solid black;
+    display: block;
+}
+.p3{
+    display: inline-block;
+    width: 65%;
+}
+.p4{
+    display: none;
+    width: 30%;
+}

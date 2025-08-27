@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <video controls="controls" poster="coucher_de_soleil.jpg">
+        <source src="Ma_meilleure_ennemie.mp4">
+        <source src="Ma_meilleure_ennemie.ogv">
+        Il serait temps de mettre votre navigateur à jour
+    </video>
+</body>
+</html>
+<!--
+pour insérer une video en html on utilise l'élément video cependant il existe plusieurs format video et que aucun de ces formats n'est supporté de façon
+universelle par les vieilles versions de principaux navigateurs il va donc falloir installer la meme piste video sous différents formats afin d'etre sur d'avoir
+une bonne prise en charge de notre fichier
+
+l'element video contient un attribut obligatoire"controls" qui va afficher les controls de base (lecture,mise en pause,retour au debut, gestion du son) elle a unique valeurpour valeur controls
+cependant il n'est pas obligatoire de mettre cette valeur controls à l'attribut controls car il est automatique pris en charge par l'attribut controls mais il est quand meme recommandé de le faire
+et à l'interieur de notre element video un element source qui va prendre en attribut "src" qui aura pour valeur le nom de notre fichier audio 
+
+
+
+on peut ajouter quelques fonctionnalité à notre video en y ajouter des attributs facultatifs:
+    preload: permet de charger le fichier en meme temps que la page web et prendra 3 valeurs:
+        auto:permet de charger tout le fichier video en meme temps que la page
+        meta-data: charger que les fichiers meta
+        none: le fichier ne sera pas charger
+    autoplay: n'a qu'une valeur autoplay lance la video automatiquement des qu'il est près
+    loop: n'a qu'une valeur loop et permet de repeter le fichier en boucle
+    muted: n'a qu'une valeur muted met le son du fichier sur 0
+
+On peut ajouter un texte au cas où un utilisateur ne serait pas capable de lire notre fichier
+
+l'élément video a des attributs qui lui sont propres:
+    poster: afficher l'image de fond avant que la vidéo ne soit lancer
+-->

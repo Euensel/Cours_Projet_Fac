@@ -1,0 +1,120 @@
+/*
+Les animations css permettent de changer le style d'un élément html et contraire aux transitions on va pouvoir modifier le style d'un élément html sans changement d'état de celui-ci et autant de fois que voulu
+les animations sàont une fonctionnalité récente donc la compatibilité n'est pas parfaite donc on aura encore là besoin des prefixes grandeurs encore une fois pas besoin de le faire pour l'internet explorer
+
+Pour créer des animations on va devoir utiliser la règle @keyframes avec la propriété animation qui est une notation short-end de 8 proprités : 
+    animation-name : le nom de l'animation définit avec @keyframes
+    annimation-duration: la durée de l'animation en s
+    animation-timing-fonction: le rythme de l'animation(ease,linear etc..)
+    animation-delay: le délai avant que l'animation commence
+    animation-iteration-count: le nombre de fois que l'animation doit se répéter (1,infinite etc..)
+    animation-direction la direction de l'animation (normal,reverse,alternative...)
+    animation-fill-mode determine le style appliqué avant et après l'animation (none,forwards,backwards,both)
+    animation-play-state l'état de lecture de l'animation (running ou paused)
+
+    seules animation-name et animation-duration sont obligatoire pour que la notation short-end animation fonctionne
+
+    il est conseiller d'utiliser les notations long-end plutot que short-end car certaines navigateurs ont du mal a gérer le short-end animation
+
+le @kayframes doit aussi prendre des prefixes grandeurs 
+on écrit @keyframes puis on met le nom de l'animation ensuite on à l'interieur du selecteur mettra from{} dans lequel y aura le style de base puis to {} où y aura le style que l'on veut 
+on peut aussi indiquer des pourcentage à la place from et to (ex: 0%{} 50%{} 100%{}) cela permettra de donner des indication selon différentes étapes de l'animation
+0% correspondant au debut et 100% à la fin
+*/
+div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    -webkit-animation-name: chgt-couleur;
+    -webkit-animation-duration: 5s;
+    -moz-animation-name: chgt-couleur;
+    -moz-animation-duration: 5s;
+    -o-animation-name: chgt-couleur;
+    -o-animation-duration: 5s;
+    animation-name: chgt-couleur;
+    animation-duration: 5s;
+}
+@-webkit-keyframes chgt-couleur{
+    from{background-color:blue;}
+    to{background-color: orange;}
+}
+
+@-moz-keyframes chgt-couleur{
+    from{background-color:blue;}
+    to{background-color: orange;}
+}
+
+@-o-keyframes chgt-couleur{
+    from{background-color:blue;}
+    to{background-color: orange;}
+}
+
+@keyframes chgt-couleur{
+    from{background-color:blue;}
+    to{background-color: orange;}
+}
+.div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    -webkit-animation-name: chan-couleur;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    
+    -moz-animation-name: chan-couleur;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    
+    -o-animation-name: chan-couleur;
+    -o-animation-duration: 5s;
+    -o-animation-timing-function: ease;
+    -o-animation-delay: 4s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: alternate;
+    
+    animation-name: chan-couleur;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+@-webkit-keyframes chan-couleur{
+    0%{background-color: green;top :0px;left: 0px;}
+    25%{background-color: yellow;top: 0px;left: 200px;}
+    50%{background-color: red;top: 200px;left: 200px;}
+    75%{background-color: blue;top: 200px;left: 0px;}
+    100%{background-color: green;top: 0px;left: 0px;}
+}
+
+@-moz-keyframes chan-couleur{
+    0%{background-color: green;top :0px;left: 0px;}
+    25%{background-color: yellow;top: 0px;left: 200px;}
+    50%{background-color: red;top: 200px;left: 200px;}
+    75%{background-color: blue;top: 200px;left: 0px;}
+    100%{background-color: green;top: 0px;left: 0px;}
+}
+
+@-o-keyframes chan-couleur{
+    0%{background-color: green;top :0px;left: 0px;}
+    25%{background-color: yellow;top: 0px;left: 200px;}
+    50%{background-color: red;top: 200px;left: 200px;}
+    75%{background-color: blue;top: 200px;left: 0px;}
+    100%{background-color: green;top: 0px;left: 0px;}
+}
+
+@keyframes chan-couleur{
+    0%{background-color: green;top :0px;left: 0px;}
+    25%{background-color: yellow;top: 0px;left: 200px;}
+    50%{background-color: red;top: 200px;left: 200px;}
+    75%{background-color: blue;top: 200px;left: 0px;}
+    100%{background-color: green;top: 0px;left: 0px;}
+}

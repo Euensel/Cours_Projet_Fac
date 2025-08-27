@@ -1,0 +1,34 @@
+/*
+les transitions vont permettre de modifier la valeur d'une propriété css de façon fluide dans le temps créant ainsi une transition entre les différentes valeurs de nos propriétés
+on va ainsi pouvoir changer progréssivement la couleur de nos textes ou la taille d'un div
+à cause de la recente gerance des transitions par le css on utilisera les prefixes grandeur, à noter que l'internet exploreur dans sa version inférieure à 10 ne gère juste pas les transitions donc il est inutile d'utiliser un préfixe grandeur
+la propriété css transition est en fait une écriture short-end qui va regrouper:
+    transition-delay indique quand va commencer la transition en seconde
+    transition-duration qui indique la durée de la transition en seconde
+    transition-property definit la propriété à laquelle la transition doit s'appliquer (le nom de la propriété)
+    transition-timing-fonction definit la courbe de vitesse de notre transition on va devoir choisir parmi 5 valeurs :
+        linear pour une transition linéaire
+        ease-in pour que la transition commence lentement
+        ease-out pour que la transition se termine lentement
+        ease-in-out pour que la transition commence lentement et se termine lentement
+        ease la transition commence lentement accélère au milieu et finisse lentement
+
+    seules transition-duration et propriety vont etre obligatoire à préciser pour que la propriété transition fonctionne
+
+afin qu'une transition demarre il va egalement falloir que la propriété ciblé connaisse un changement de valeur nous allons donc souvent changer la valeur d'une propriété lors d'un changer d'état de l'element auquel il est associé
+ainsi nous utiliseront souvent les transition avec les pseudo classes et particulièrement avec ma pseudo classe hover
+*/
+div{
+    width: 200px;
+    height: 200px;
+    background-color: #06D;
+    -webkit-transition:3s width 2s ease, 3s background-color 5s ease;
+    -moz-transition:3s width 2s ease, 3s background-color 5s ease;
+    -o-transition:3s width 2s ease, 3s background-color 5s ease;
+    transition:3s width 2s ease, 3s background-color 5s ease;
+}
+div:hover{
+    width: 400px;
+    background-color: #A03;
+
+}

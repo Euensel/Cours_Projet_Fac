@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle,blue,purple);
+    background-size: 400%;
+    animation: 15s backgroudAnimation ease infinite;
+}
+@keyframes backgroudAnimation {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+nav{
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    background-image: url("automne.jpeg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    top: auto;
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px 15px;
+    background-color: silver;
+    
+}
+a:hover{
+    background-color: orange;
+
+}
+li{
+    margin-right: 200px;
+    
+}
+.liste{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}

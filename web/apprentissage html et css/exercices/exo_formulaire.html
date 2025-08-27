@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exo_formulaire.css">
+</head>
+<body>
+    <form method="post" action="traitement.php;">
+        <fieldset>
+            <legend>CIVILITE</legend>
+            <label for="nom">*Nom : </label>
+            <input type="text" name="nom" id="nom">
+            <label for="prenom">*Prenom : </label>
+            <input type="text" name="prenom" id="prenom"><br>
+            *Sexe : 
+            <input type="radio" name="sexe" id="homme" value="homme">
+            <label for="homme">Homme</label>
+            <input type="radio" name="sexe" id="femme" value="femme">
+            <label for="femme">Femme</label>
+        </fieldset>
+        <fieldset>
+                <legend>NAISSANCE ET LIEU DE RESIDENCE</legend>
+                <label for="adresse">*Adresse : </label>
+                <input type="text" name="adresse" id="adresse">
+                <label for="poste">*Code postal : </label>
+                <input type="text" name="code postal" id="poste">
+                <label for="vile">*Ville : </label>
+                <input type="text" name="ville" id="ville"><br><br>
+                <label for="date">*Date de naissance : </label>
+                <input type="date" name="date" id="date">
+                <label for="lieu">*Lieu de naissance : </label>
+                <input type="text" name="lieu" id="lieu">
+        </fieldset>
+        <fieldset>
+            <legend>DIVERS</legend>
+            Informations complementaires :  <br>
+            <textarea name="info supplémentaire" id="info" rows="25" cols="55" placeholder="Donner des infos complementaires..."></textarea>
+        </fieldset>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+    </form>
+    
+</body>
+</html>

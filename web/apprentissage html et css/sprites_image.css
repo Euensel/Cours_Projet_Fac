@@ -1,0 +1,29 @@
+/*
+un sprite d'image correspond à une collection d'image rassemblée en une seule grande image l'idée est de reduire le nombre de réquete serveur, en effet en cas d'image séparer une requete va etre envoyé au serveur pour récupérer chaque image présent dans une page web pour ensuite pouvoir les afficher.
+Dans le cas d'une page contenant de nombreuses images donc cela peut diminuer sensiblement la vitesse d'affichage de la page, en utilisant les sprites une seule requete sera envoyée au serveurb et cela optimisera les performances de notre site
+
+on va créer des liens en html auxquels on donnera un id puis on va donner une largeur et une hauteur un display block et une position absolute afin d'utilser left right ... 
+car cela ne fonctionne pas avec une position statique en css à partir des id ensuite chaque id correspondra un un logo de l'image avec backgroud-position on va estimer dans quelle partie de l'image se trouve le logo
+
+*/
+#fb,#tw,#tk{
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: absolute;
+}
+#fb{
+    background-image: url("reseau_sociaux.jpg");
+    background-position: -160px 0px;
+}
+#tw{
+    background-image: url("reseau_sociaux.jpg");
+    background-position: -580px -160px;
+    left: 400px;
+}
+#tk{
+    background-image: url("reseau_sociaux.jpg");
+    background-position: -720px -160px;
+    bottom: 200px;
+    
+}

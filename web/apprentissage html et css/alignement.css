@@ -1,0 +1,26 @@
+/*
+pour aligner un element html en css on utilise 3 propriétés: 
+    margin: avec auto pour pouvoir centrer l'élément par rapport à son element parent (margi: 0px auto;)
+    position: on peut aligner horizontalemnt avec position toujours avec les mm regles deja vu mais petit astuce en plus
+        on peut centrer un texte avec position en attribuant la valeur en pourcentage à right et left
+    float :on aligne horizontalement avec float egalement
+*/
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.div{
+    background-color: orange;
+    width: 200px;
+    height: 300px;
+    margin: 0px auto;
+}
+.div2{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+}
+

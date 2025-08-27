@@ -1,0 +1,66 @@
+<!-- 
+<div></div>          : Regrouper des éléments et structurer la mise en page
+<span></span>        : Modifier une partie du texte sans créer de bloc
+<section></section>  : Permet de sectionner une partie d'un document (il doit etre titré)
+<aside></aside>      : Utilisée pour définir un contenu en rapport avec le contenu principal
+                       mais qui peut être considéré comme accessoire ou secondaire
+                       (ex: une barre latérale, une liste de liens connexes, etc.)
+<article></article>  : utilisée pour définir un contenu indépendant et autonome
+                       qui peut être distribué ou réutilisé séparément du reste de la page
+<nav></nav>          : sert à définir une section de navigation sur une page web. 
+                       Elle est utilisée pour regrouper des liens de navigation vers d'autres pages
+                       ou différentes sections de la même page
+
+<main></main> 
+<header></header>    : utilisée pour définir l'en-tête d'une page ou d'une section ou encore d'un article  
+    Elle contient généralement :
+        ✅ Un titre principal (<h1>, <h2>, etc.)
+        ✅ Un logo
+        ✅ Un menu de navigation
+        ✅ Une introduction ou un slogan
+<footer></footer>    : utilisée pour définir le pied de page d’une page web ou d’une section   
+    Elle contient généralement :
+        ✅ Des informations légales (copyright, mentions légales)
+        ✅ Des liens de contact (email, réseaux sociaux)
+        ✅ Une signature d’auteur ou des crédits  
+        ✅ Un menu secondaire
+
+-->
+<main></main>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Structurer une page web</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mon site</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">Quelque chose</a></li>
+                <li><a href="#">Quelque chose</a></li>
+                <li><a href="#">Quelque chose</a></li>
+
+            </ul>
+        </nav>
+
+        <article>
+            <header>
+                <h2>Mon titre d'article</h2>
+            </header>
+            <p>Le contenu de l'article...</p>
+            <footer>
+                <p>Ce contenu est redigé par <address>Toussaint</address> le <time datetime="2025-03-25 19:01:07">25/03/2025</time></p>
+            </footer>
+        </article>
+        <footer>
+            <p>copyright &copy; 2025</p>
+        </footer>
+    </body>
+</html>

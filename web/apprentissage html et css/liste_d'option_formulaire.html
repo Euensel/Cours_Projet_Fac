@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+    <form method="post" action="traitement.php">
+        Où habitez-vous?<br>
+        <select name="Pays" id="">
+            <optgroup label="Europe">
+                <option value="france">France</option>
+                <option value="Belgique">Belgique</option>
+            </optgroup>
+            <optgroup label="Amérique">
+                <option value="Mexique">Mexique</option>
+                <option value="Canada">Canada</option>
+            </optgroup>
+            <optgroup label="Afrique">
+                <option value="maroc">Maroc</option>
+                <option value="Rdc">RDC</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
+<!--
+Les listes d'option permettent au user de choisir une valeur dans une liste d'option déroulante
+Pour créer une liste d'option on va utiliser l'element "select" pour définir notre liste et des elements "option" pour définir chaque élément de notre liste 
+un attribut name est nécessaire à notre élément select et des attributs value à chaque élément option
+On peut ensuite grouper les options entre elles grace à l'element "optgroup" auquel nous préciserons pour chaque groupe d'option un attribut label différent de l'element label bien qu'ils auront le meme role de donnée un titre au groupe
+-->

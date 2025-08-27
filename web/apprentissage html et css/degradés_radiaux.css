@@ -1,0 +1,63 @@
+/*
+contrairement aux dégradés lineaires qui se propagaient d'un point à un autre selon une direction les dégradés radiaux vont se propager 
+à partir d'un point central vers toutes les directions 
+cette fois ci on mettra en valeur de backgroud la propriété radial-gardient toujours avec les différents prefixes grandeurs
+elle va prendre différentes valeurs pour controler differents aspects du degradé
+    la forme: deux valeurs : 
+        ellipse: dégradé de forme elliptique qui est egalement la valeur par défaut
+        circle: dégradé de forme circulaire
+    la taille du point central et du dégradé
+    les couleurs composants le dégradé
+
+on peut gérer les transitions entre les couleurs de nos dégradés donc indiquer à quel moment changer de couleur en ajoutant des valeurs en %
+apres chaque couleur qui vont correspondre au % totaux des dégradés auquels doivent se faire les transitions entre les couleurs et egalemenr la 
+douceur des couleurs cela pour les dégradé tant linéaire que radiaux
+
+on peut egalement definir la position et la taille d'un dégradé radial
+    la position:  on va ajouter une paire de coordonnée et un mot clé en première valeur de radial-gradient les coordonnées seront soit px soit en %
+       vont corespondre à l'emplacement du centre du dégradé par rapport au coin superieur gauche de l'élément auquel il est appliqué 
+    la taille: on va utiliser le mot clé 
+        closest-side: fait en sorte que le dégradé va toucher le coté le plus proche de son centre dans le cas d'un cercle ou les deux cotés les plus proches de son
+            centre dans le cas d'une ellipse
+        farthest-side: fait en sorte que le dégradé va toucher le coté le plus éloigné de son centre dans le cas d'un cercle ou les deux cotés les plus éloigné de son
+            centre dans le cas d'une ellipse
+        closed-col: le degradé va toucher le coin le plus proche de son centre
+        truc: le degradé va toucher le coin le plus éloigné de son centre
+*/
+.div{
+    float: left;
+    width: 400px;
+    height: 400px;
+    background: -webkit-linear-gradient(left,blue 10%,purple 30%,red 60%);
+    background: -o-linear-gradient(right,blue 10%,purple 30%,red 60%);
+    background: -moz-linear-gradient(right,blue 10%,purple 30%,red 60%);
+    background: linear-gradient(to right,blue 10%,purple 30%,red 60%);
+}
+.div2{
+    float: right;
+    width: 400px;
+    height: 400px;
+    background: -webkit-radial-gradient(circle,blue 10%,purple 30%,red 60%);
+    background: -o-radial-gradient(circle,blue 10%,purple 30%,red 60%);
+    background: -moz-radial-gradient(circle,blue 10%,purple 30%,red 60%);
+    background: radial-gradient(circle,blue 10%,purple 30%,red 60%);
+}
+.div3{
+    float: right;
+    width: 400px;
+    height: 400px;
+    background: -webkit-radial-gradient(20% 40%,closest-side,blue 10%,purple 30%,red 60%);
+    background: -o-radial-gradient(20% 40%,closest-side,blue 10%,purple 30%,red 60%);
+    background: -moz-radial-gradient(20% 40%,closest-side,blue 10%,purple 30%,red 60%);
+    background: radial-gradient(closest-side at 20% 40%,blue 10%,purple 30%,red 60%);
+}
+.div4{
+    float: left;
+    width: 400px;
+    height: 400px;
+    background: -webkit-radial-gradient(20% 40%,farthest-side,blue 10%,purple 30%,red 60%);
+    background: -o-radial-gradient(20% 40%,farthest-side,blue 10%,purple 30%,red 60%);
+    background: -moz-radial-gradient(20% 40%,farthest-side,blue 10%,purple 30%,red 60%);
+    background: radial-gradient(farthest-side at 20% 40%,blue 10%,purple 30%,red 60%);
+}
+

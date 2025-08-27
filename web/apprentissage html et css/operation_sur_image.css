@@ -1,0 +1,13 @@
+img{
+    padding: 10px;
+    border: 10px solid blueviolet;
+    box-shadow: 0px 0px 17px #BB0;
+}
+/*
+pour redimensionner une image on utilise width et height pour la largeur et la longeur cependant il est préférable d'indiquer uniquement la largeur avec width
+afin que la hauteur soit donnée automatiquement
+il faut savoir que les images sont des éléments de type inline donc quand on les places ils se positionnent à cotés d'autres éléments html pour palier à cela 
+on peut soit encadrer notre image par un element de type block comme p ou div soit utiliser la propriété display soit float et clear
+
+on peut egalement faire des cadres autour de nos images avec les modeles de boites
+*/

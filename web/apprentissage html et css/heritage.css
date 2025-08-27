@@ -1,0 +1,23 @@
+body{
+    color: aqua;
+}
+p{
+    color:blue
+}
+#para{
+    color: brown;
+}
+/*
+    lorsque je donne par exemple une coileur bleu à mon élément "body" tous les élements se trouvant dans cet élement hérite de cette couleur
+    lorsque un élément reçoit plusieurs modification de style c'est le style le plus précis qu'il prendra
+*/
+/*
+Ordre de ciblage en cas de conflit:
+    -attribut "style" dans la balise ouvrante p
+    -élément style dans l'elément head
+    -le ciblage id
+    -le ciblage class
+    -le selecteur p dans le css
+    -le selecteur body
+
+*/

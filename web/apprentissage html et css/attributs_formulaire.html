@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <form method="post" action="traitement.php">
+        <label for="prenom">Entrez votre prenom</label>
+        <input type="text" name="prenom" id="prenom" autocomplete="on" placeholder="ex:Eureka"><br>
+        <label for="nom">Entrez votre nom</label>
+        <input type="text" name="nom" id="nom" autofocus="autofocus"><br>
+        <label for="nombre">Choisissez un chiffre entre 1 et 10</label>
+        <input type="number" name="nombre" id="nombre" min="1" max="10"><br>
+
+
+        <input type="radio" id="homme" name="sexe" value="homme" checked=""checked>
+        <label for="homme">Un homme</label><br>
+        <input type="radio" id="femme" name="sexe" value="">
+        <label for="femme">Une femme</label><br>
+        Majeur ou mineur?<br>
+        <input type="radio" id="mineur" name="age" value="mineur">
+        <label for="mineur">Mineur</label><br>
+        <input type="radio" id="majeur" name="age" value="majeur">
+        <label for="majeur">Majeur</label><br>
+
+        Quels sport pratiquer-vous?<br>
+        <input type="checkbox" name="sport" id="natation" value="natation" checked=""checked>
+        <label for="natation">Natation</label><br>
+        <input type="checkbox" name="sport" id="course" value="course">
+        <label for="course">Course à pied</label><br>
+        <input type="checkbox" name="sport" id="football" value="football" checked="checked">
+        <label for="football">Football</label><br>
+        <input type="submit" value="Envoyer"> 
+
+        Où habitez-vous?<br>
+        <select name="Pays" id="">
+            <optgroup label="Europe">
+                <option value="france" selected="selected">France</option>
+                <option value="Belgique">Belgique</option>
+            </optgroup>
+            <optgroup label="Amérique">
+                <option value="Mexique">Mexique</option>
+                <option value="Canada">Canada</option>
+            </optgroup>
+            <optgroup label="Afrique">
+                <option value="maroc">Maroc</option>
+                <option value="Rdc">RDC</option>
+            </optgroup>
+        </select>
+
+        <label for="postnom">Entrez votre postnom </label>
+        <input type="text" name="postnom" id="postnom" required="required"><br>
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
+<!--
+il y a encore d'autres attributs qui permettent d'améliorer nos formulaires:
+    -autocomplete permet de finir automatiquement le remplissage d'un champ en se basant sur les informations entrées précédemment dans d'autres formulaires remplis par les users, il prend deux valeurs:
+        -on : le champ va s'auto compléter
+        -off: le champ ne va pas s'auto compléter
+    -autofocus permet d'attribuer automatiquement le focus sur un élément lors du chargement de la page, le focus correspond au fait d'avoir sa barre d'écriture c'est à dire le curseur de sa souris présent dans un champ , elle n'a qu'une valeur autofocus
+    -min et max détermine la valeur minimale ou maximale que l'on souhaite recevoir pour un champ
+    -placeholder donne une valeur de remplissage dans un champ à l'interieur du champ et sera grise à moitié transparent et disparais dès que le user clique dessus
+    -checked permet de pré-selectionner (afficher par défaut) une ou plusieurs options dans des zones d'option selon le type d'element utilisé il n'a qu'une valeur checked
+    -selected fait la meme chose que checked mais pour les listes d'option il n'a qu'une valeur selected
+    -required permet d'avoir un champ de formulaire obligatoire cad si me user n'a pas rempli ce champ le formulaire ne sera pas envoyer, il n'a qu'une valeur required
+
+-->

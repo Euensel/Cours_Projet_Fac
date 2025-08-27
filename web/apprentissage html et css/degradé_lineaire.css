@@ -1,0 +1,40 @@
+/*
+en css on peut créer deux type de dégradé on va commencer par les dégradés lineaires cad qui vont suivre une direction par exemple gauche vers droite
+pour créer un dégradé linéaire en css on utilise "linear-gradient" en valeur de la propriété backgroud
+cependant à cause du non support de linear-gradient par tous les navigateurs on va devoir le préfixer par avec des préfixes grandeurs qui sont des mots clés 
+qui ont été créés afin d'optimiser artificiellment  la compatibilité de certaines propriétés css avec d'anciennes versions de navigateur ces prefixes seront précisés
+avant l'emploi de la propriété qui peut poser probleme dans notre cas ce sera linear-gradient
+chaque navigateurs a son propre préfixes grandeur: 
+    safari et chrome: webkit
+    firefox: moz
+    internet explorer: ms
+    opéra: o
+    toujours préciser un tiret avant le prefixe comme ceci -moz-
+donc afin que la propriété linear gradient fonctinne correctement avec les anciennes versions de navigateurs on va devoir utiliser ces prefixes (ex: moze-linear-gradient)
+cependant y a une exception pour l'internet explorer où nous utiliseront pas le préfixe pour cette propriété tout simple parceque internet explorer dans ses versions inférieures à la version
+10 ne reconnait pas du tout cette propriété donc meme avec le préfixe la propriété ne sera pas supporté et le dégradé n'apparaitra pas bien dans tous les cas
+
+linear-gradient va devoir prendre au moins deux valeurs obligatoires qui vont correspondre à la direction et à la couleur que l'on veut pour le dégradé on peut préciser autant de couleur qu'on le souhaite
+et chaque couleur doit etre séparé par une virgule et on va utiliser tant les rgb ou hexedecimale et pour la direction on peut utiliser soit des mots clés(bottom left) soit des angles le problème étant que 
+selon le préfixe gradeur utilisé un meme mot clé ne va pas signifier la meme chose par exemple la synthaxe commune pour un degradé vers le droite pour la proprété sans préfixe grandeur va etre "to right" tant dis que 
+pour moze et o la synthaxe va tere "right" et webkit c'est le contraire donc "left" et pour les angles on va utiliser les dégrés(deg en abrégé) pour tous les préfixes ainsi que la propriété non préfixé 
+si on ne précise pas la direction ce sera par défaut de haut vers le bas à noter que 180 dégré correspond à la valeur par défaut de haut vers le bas et 90 deg de gauche vers la droite 270 de droite vers la gauche et 0 de bas vers le haut
+*/
+.div{
+    background: -webkit-linear-gradient(left,red,orange,blue);
+    background: -o-linear-gradient(right,red,orange,blue);
+    background: -moz-linear-gradient(right,red,orange,blue);
+    background: linear-gradient(to right,red,orange,blue);
+}
+.div2{
+    background: -webkit-linear-gradient(top left,rgba(255,000,000,0.8),rgba(255,000,000,0.1));
+    background: -o-linear-gradient(bottom right,rgba(255,000,000,0.8),rgba(255,000,000,0.1));
+    background: -moz-linear-gradient(bottom right,rgba(255,000,000,0.8),rgba(255,000,000,0.1));
+    background: linear-gradient(to bottom right,rgba(255,000,000,0.8),rgba(255,000,000,0.1));
+}
+.div3{
+    background: -webkit-linear-gradient(90deg,#A00,yellow,orange,blue);
+    background: -o-linear-gradient(90deg,#A00,yellow,orange,blue);
+    background: -moz-linear-gradient(90deg,#A00,yellow,orange,blue);
+    background: linear-gradient(90deg,#A00,yellow,orange,blue);
+}

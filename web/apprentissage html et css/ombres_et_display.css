@@ -1,0 +1,14 @@
+/*box-shadow: permet de creer des ombres autour de nos boites afin que celles ci se detacher de l'arrière plan
+    on donne 4 valeurs en px ou %/
+        la première valeur correspond au déplacement horizontale de l'ombre si elle est positive elle va à droite et à gauche si elle est négative
+        la deuxième déplacement verticale positive vers le bas negative vers le haut
+        troisieme le rayon sur lequel l'ombre va se propager
+        la quatrieme la couleur de l'ombre
+        on peut egalement donner une cinqieme valeur inset pour projetter l'ombre vers l'interieur si tel est le cas tout s'inverse
+*/
+
+
+.div{
+    border: 50px solid #000;
+    box-shadow:4px 6px 3px blue inset ;
+}
