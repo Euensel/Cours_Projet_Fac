@@ -1,0 +1,130 @@
+COURS SUR L'UTILISATION PRATIQUE DE GIT
+---------------------------------------
+
+Commandes de base (Linux)
+------------------------
+
+ls => liste le contenu.
+
+ls -la => liste tout (fichiers cachés + détails).
+
+cd dossier => aller dans un dossier.
+
+cd .. => remonter.
+
+cd - => revenir au dossier précédent.
+
+mkdir nom => créer un dossier.
+
+rm fichier => supprimer un fichier.
+
+rm -r dossier => supprimer un dossier et son contenu.
+
+Git de base
+-----------
+
+git clone URL => cloner un dépôt.
+
+git clone URL nom_dossier => cloner dans un dossier avec un nom personnalisé.
+
+git status => voir l’état (fichiers modifiés, suivis, en attente).
+
+git init => initialiser un dépôt Git dans un dossier vide (ou existant).
+
+Ajouter et valider
+------------------
+
+git add fichier => ajouter un fichier précis.
+
+git add . => ajouter tous les fichiers modifiés.
+
+git commit -m "message" => créer un commit avec un message.
+
+git commit -am "message" => ajouter + commit directement (uniquement pour fichiers déjà suivis).
+
+git commit -m "message" -m "description" => Ajouter un commit + description
+
+Branches
+--------
+
+git branch => lister les branches.
+
+git branch nom => créer une nouvelle branche.
+
+git checkout nom => basculer sur une branche.
+
+git checkout -b nom => créer une branche + basculer directement.
+
+git merge nom => fusionner une branche dans la branche actuelle.
+
+Remote
+------
+
+git remote => liste les dépôts distants connus.
+
+git remote -v => affiche les URLs des dépôts distants.
+
+git remote add origin URL => lier ton projet local à un dépôt GitHub/GitLab.
+
+git remote remove origin => supprimer le lien.
+
+git remote rename ancien nouveau => renommer un remote.
+
+Pousser & récupérer
+--------------------
+
+git push -u origin branche => envoyer la branche locale sur GitHub et définir le suivi.
+
+git push => envoyer les commits vers le dépôt distant (après le premier push avec -u).
+
+git pull => récupérer et fusionner les changements du dépôt distant.
+
+git fetch => récupérer sans fusionner (juste mettre à jour les refs).
+
+Cas pratiques
+--------------
+
+Créer un dépôt et l’envoyer sur GitHub :
+
+git init
+git add .
+git commit -m "Premier commit"
+git branch -M main
+git remote add origin git@github.com:user/monrepo.git
+git push -u origin main
+
+
+Travailler sur une nouvelle fonctionnalité :
+
+git checkout -b feature-login
+# coder
+git add .
+git commit -m "Ajout du système de login"
+git push -u origin feature-login
+
+Autres Commandes git 
+--------------------
+
+-git log =>
+    Sert à voir l’historique des commits.
+    Affiche : l’ID du commit, l’auteur, la date et le message.
+    Variante utile :git log --oneline => historique condensé (un commit par ligne).
+                    git log --graph --oneline --all => historique visuel avec branches.
+
+-git show =>
+    Sert à voir les détails d’un commit précis (les changements faits).
+    Par défaut => montre le dernier commit.
+    Exemple :
+    git show 123abc => montre ce que contient le commit avec l’ID 123abc.
+
+-git restore --staged fichier =>
+    Sert à enlever un fichier de la zone de staging (l’endroit où vont les fichiers après git add).
+    Cela ne supprime pas les changements dans ton code, ça enlève juste le fichier de la préparation du commit.
+
+    Exemple :
+
+    git add test.php
+    git restore --staged test.php
+
+
+    Ici test.php ne sera plus inclus dans le prochain commit, mais reste modifié dans ton dossier.
