@@ -1,0 +1,93 @@
+COURS SUR LE LANGAGE MARKDOWN
+-----------------------------
+
+Théorie sur le langage Markdown
+------------------------------
+Qu’est-ce que Markdown ?
+
+Markdown est un langage de balisage léger, créé en 2004 par John Gruber.
+
+Son but : écrire du texte lisible en brut (fichier .md) mais qui peut être converti en HTML pour le web.
+
+L’idée est de rendre la rédaction simple, sans la complexité du HTML.
+
+Caractéristiques principales
+----------------------------
+
+Lisible : même sans conversion, un fichier Markdown reste compréhensible.
+
+Portable : c’est du texte brut → fonctionne sur tous les systèmes (Mac, Windows, Linux).
+
+Rapide : pas besoin de connaître tout le HTML pour écrire des titres, listes, liens, images…
+
+Flexible : peut être converti en HTML, PDF, DOCX, slides, etc.
+
+Cas pratiques (où on utilise Markdown ?)
+-----------------------------------------
+
+Documentation logicielle : README sur GitHub, GitLab, etc.
+
+Rédaction d’articles : blogs statiques (Jekyll, Hugo, Hexo…).
+
+Notes personnelles : avec Obsidian, Notion, VS Code.
+
+Gestion de projets : listes de tâches, cases à cocher dans GitHub Issues.
+
+Présentations & rapports : conversion vers PDF ou diaporamas.
+
+Type de langage
+----------------
+
+Ce n’est pas un langage de programmation, mais un langage de balisage léger (comme HTML, mais plus simple).
+
+Exemple :
+
+En HTML : <h1>Titre</h1>
+
+En Markdown : # Titre
+
+Importance
+---------
+Standard sur GitHub : presque tous les projets utilisent Markdown pour leurs fichiers README.
+
+Gain de temps : écrire du contenu sans se soucier de la mise en page compliquée.
+
+Accessibilité : facile à apprendre → utile pour les développeurs, étudiants, rédacteurs.
+
+Interopérabilité : un même fichier .md peut être affiché sur VS Code, exporté en PDF ou publié sur un site web.
+
+Synthaxe de base
+----------------
+
+-Titres
+-Paragraphes et retours à la ligne
+-Ligne de séparation
+-Italique, gras, mise en exergue
+-Listes à puces et numérotées
+-Liens hypertextes
+-images
+-Extraits et blocs de code
+
+Synthaxe étentue
+-----------------
+
+-tableaux
+-cases à cocher
+-exposant et indice
+-surligner ou barrer du texte
+-notes de bas de Paragraphes
+-liens vers les Titres
+-autres éléments spécifiques:
+    -table des matières
+    -icones
+    -formules mathématiques
+    -diagrammes
+
+Resumé
+------
+En résumé : Markdown est un outil essentiel pour rédiger rapidement du texte structuré, clair et partageable, 
+surtout dans le monde du développement et de la documentation.
+
+NB: voir le rendu web dans vscode 
+- sur mac: Command + shift + V  ou command + K puis V
+-sur Windows ou Linux : Ctrl + Shift + V ou Ctrl + K puis V
