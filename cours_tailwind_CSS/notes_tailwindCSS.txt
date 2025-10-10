@@ -1,0 +1,349 @@
+Documentation Tailwind CSS complète
+1. Couleurs
+
+Texte : text-[NOM]-[NUANCE] → définit la couleur du texte.
+Ex : text-red-500
+
+Couleur héritée : text-current → hérite de la couleur de l’élément parent.
+
+Couleur de fond : bg-[NOM]-[NUANCE] → définit la couleur d’arrière-plan.
+Ex : bg-blue-400
+
+Couleur de bordure : border-[NOM]-[NUANCE] → colore la bordure.
+
+Couleur avec opacité : bg-black/50, text-red-500/30 → applique une transparence.
+
+2. Taille du texte
+
+text-[TAILLE] → définit la taille de police.
+Ex : text-3xl
+
+Échelles disponibles :
+text-xs, text-sm, text-base, text-lg, text-xl, text-2xl … jusqu’à text-9xl.
+
+3. Dimensions
+
+Largeur : w-[VALEUR] → largeur fixe ou relative (ex : w-10, w-1/2, w-full, w-screen).
+
+Hauteur : h-[VALEUR] → hauteur de l’élément (ex : h-10, h-auto, h-screen).
+
+Largeur et hauteur ensemble : size-[VALEUR] → définit les deux à la fois.
+
+Valeurs min / max :
+
+min-w-[VALEUR] / max-w-[VALEUR] → largeur minimale ou maximale.
+
+min-h-[VALEUR] / max-h-[VALEUR] → hauteur minimale ou maximale.
+
+4. Marges et espacements
+Margin
+
+m-[VALEUR] → ajoute une marge sur les 4 côtés.
+
+mt, mb, ml, mr → marge sur un seul côté (top, bottom, left, right).
+
+mx → marge horizontale (gauche + droite).
+
+my → marge verticale (haut + bas).
+
+mx-auto → centre un élément horizontalement.
+
+-m-[VALEUR] → marge négative.
+
+Padding
+
+p-[VALEUR] → définit un espace intérieur sur tous les côtés.
+
+pt, pb, pl, pr → padding sur un seul côté.
+
+px → padding horizontal.
+
+py → padding vertical.
+
+5. Bordures
+
+border → ajoute une bordure fine par défaut.
+
+border-2, border-4, border-8 → épaisseur.
+
+border-solid, border-dashed, border-dotted, border-double, border-none → style.
+
+border-t, border-b, border-x, border-y → sur certains côtés.
+
+Arrondis :
+
+rounded-[TAILLE] → adoucit les coins (rounded-md, rounded-lg…)
+
+rounded-full → forme circulaire (ex : pour images de profil).
+
+rounded-none → pas d’arrondi.
+
+Coins précis : rounded-tl, rounded-tr, rounded-bl, rounded-br.
+
+6. Polices et styles
+
+font-sans, font-serif, font-mono → type de police.
+
+font-[light|medium|semibold|bold|black] → épaisseur de texte.
+
+italic → texte en italique.
+
+not-italic → annule l’italique.
+
+7. Ombres et opacités
+
+opacity-[POURCENTAGE] → définit la transparence (ex : opacity-50 = 50%).
+
+shadow-[TAILLE] (xs, sm, md, lg, xl, 2xl) → ombre portée.
+
+inset-shadow-[TAILLE] → ombre interne.
+
+text-shadow-[TAILLE] → ombre sur texte (si activée dans la config).
+
+8. Listes
+
+list-none → supprime les puces.
+
+list-disc → puces rondes.
+
+list-decimal → numérotation.
+
+list-inside → puce à l’intérieur du bloc.
+
+list-outside → puce à l’extérieur.
+
+list-image-none → supprime une image de puce personnalisée.
+
+9. Dépassement (Overflow)
+
+overflow-hidden → cache le contenu débordant.
+
+overflow-auto → ajoute une barre de défilement seulement si nécessaire.
+
+overflow-scroll → force le défilement.
+
+overflow-clip → coupe sans défilement.
+
+text-ellipsis (avec whitespace-nowrap + overflow-hidden) → tronque le texte avec ....
+
+10. Texte
+
+Alignement : text-left, text-center, text-right, text-justify.
+
+Décoration : underline, no-underline.
+
+Décalage de soulignement : underline-offset-[VALEUR].
+
+Casse : uppercase, lowercase, capitalize.
+
+Espacement lettres : tracking-[VALEUR].
+
+Interligne : leading-[VALEUR].
+
+11. États et interactions
+
+hover:[CLASSE] → au survol.
+
+focus:[CLASSE] → quand l’élément est sélectionné (input, bouton…).
+
+active:[CLASSE] → lors du clic.
+
+visited:[CLASSE] → lien déjà visité.
+
+disabled:[CLASSE] → état désactivé.
+
+cursor-pointer → curseur de clic.
+
+cursor-not-allowed → curseur bloqué.
+
+12. Flexbox
+
+flex → active le mode flex.
+
+flex-row → aligne horizontalement.
+
+flex-col → aligne verticalement.
+
+flex-row-reverse, flex-col-reverse → inverse l’ordre.
+
+justify-[start|center|end|between|around|evenly] → aligne sur l’axe principal.
+
+items-[start|center|end|stretch|baseline] → aligne sur l’axe secondaire.
+
+gap-[VALEUR] → espace entre les éléments.
+
+order-[NOMBRE] → modifie la position d’un élément dans l’ordre d’affichage.
+
+13. Grilles (Grid)
+
+grid → active la disposition en grille.
+
+grid-cols-[NOMBRE] → définit le nombre de colonnes.
+
+gap-[VALEUR] → espace entre lignes et colonnes.
+
+order-[NOMBRE] → réorganise les éléments dans la grille.
+
+14. Positionnement
+
+relative → position normale, mais modifiable.
+
+absolute → position par rapport au parent le plus proche positionné.
+
+fixed → position fixe sur l’écran.
+
+sticky → colle lors du défilement.
+
+top-[VALEUR], bottom-[VALEUR], left-[VALEUR], right-[VALEUR] → décalages.
+
+z-[VALEUR] → profondeur d’empilement (z-index).
+
+object-cover → image recadrée pour remplir.
+
+object-contain → image entière visible.
+
+15. Transformations
+
+translate-x-[VALEUR], translate-y-[VALEUR] → déplace.
+
+scale-[VALEUR] → agrandit ou réduit.
+
+rotate-[DEGRÉS] → fait tourner.
+
+skew-x-[VALEUR], skew-y-[VALEUR] → inclinaison.
+
+Ajouter - devant la classe pour inverser (ex : -translate-x-1).
+
+16. Filtres et effets
+
+grayscale-[VALEUR] → met en niveaux de gris.
+
+blur-[VALEUR] → floute.
+
+brightness-[VALEUR] → ajuste la luminosité.
+
+contrast-[VALEUR] → change le contraste.
+
+invert → inverse les couleurs.
+
+sepia → ton sépia.
+
+saturate-[VALEUR] → intensifie les couleurs.
+
+backdrop-blur, backdrop-brightness → filtre appliqué à l’arrière-plan.
+
+17. Transitions et animations
+Transitions
+
+transition → active la transition.
+
+transition-[propriété] → cible une propriété (ex : transition-colors, transition-transform).
+
+duration-[MS] → durée en millisecondes.
+
+delay-[MS] → délai avant démarrage.
+
+ease-[linear|in|out|in-out] → fonction d’accélération.
+
+Animations prêtes
+
+animate-spin → rotation continue.
+
+animate-ping → effet de pulsation.
+
+animate-pulse → effet d’apparition/disparition douce.
+
+animate-bounce → effet de rebond.
+
+Animation personnalisée
+@keyframes slidein {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@theme {
+  --animate-slidein: slidein 1s ease-in-out;
+}
+.animate-slidein {
+  animation: var(--animate-slidein);
+}
+
+18. Responsive Design
+
+Breakpoints par défaut :
+
+Nom	Taille minimale	Usage
+sm	640px	petits écrans
+md	768px	téléphones larges
+lg	1024px	tablettes
+xl	1280px	ordinateurs
+2xl	1536px	grands écrans
+
+Exemple :
+
+<div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+
+19. Mode sombre
+
+Dans input.css :
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+Ajouter la classe dark sur <html>.
+
+Exemple :
+
+<div class="bg-white dark:bg-gray-900 text-black dark:text-white"></div>
+
+20. Personnalisation
+
+Modifier les variables Tailwind dans input.css :
+
+@theme {
+  --color-orange-500: blue;
+  --color-secondary: #999;
+  --breakpoint-3xl: 99rem;
+  --spacing-99: 10000rem;
+  --font-merriweather: 'Merriweather, arial';
+}
+
+21. Polices Google
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+@theme {
+  --font-merriweather: 'Merriweather', serif;
+}
+
+22. Styles de base
+
+Appliquer des styles globaux :
+
+@layer base {
+  a {
+    text-decoration: underline;
+    color: blue;
+  }
+}
+
+23. Composants personnalisés
+
+Créer des classes réutilisables :
+
+@layer components {
+  .btn {
+    @apply bg-orange-500 text-white py-4 px-14 rounded-lg hover:bg-black cursor-pointer mx-auto block mt-3;
+  }
+}
+
+24. Classes utilitaires personnalisées
+
+Créer ses propres utilitaires :
+
+@utility flex-centered {
+  @apply flex justify-center items-center;
+}
+
+25. Conteneur
+
+container → définit une largeur maximale selon la taille d’écran.
+
+mx-auto → centre le conteneur horizontalement.

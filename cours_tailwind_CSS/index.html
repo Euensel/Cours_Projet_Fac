@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="Fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSY BAR - Landing Page Formation Believemy</title>
+    <link rel="stylesheet" href="src/css/output.css">
+</head>
+<body>
+    <!--Video-->
+    <video src="src/assets/welcome.mp4" autoplay loop muted class="absolute -z-10 object-cover w-full h-screen" ></video>
+
+  <main class="container mx-auto min-h-screen flex flex-col">
+    <!--En-tete-->
+      <header class="flex items-center justify-between pt-5">
+        <nav>
+            <ul class="flex gap-5 text-gray-500">
+                <li>BUSY Bar</li>
+                <li><a class="underline" href="#">Boutique</a></li>
+                <li><a class="underline" href="#">Téléchargements</a></li>
+                <li><a class="underline" href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <img class="w-52 hover:grayscale-100 duration-200 hover:-translate-y-1" src="src/assets/badge.svg" alt="badge">
+    </header>
+    <!--Corps-->
+    <section class="mt-[40vh] flex mx-auto flex-col max-w-[550px] text-sm grow">
+        <p>
+            <span class="font-bold">BUSY Bar</span> est un dispositif multi-outil de productivité avec un écran LED pixelisé. Minuteur de concentration avec fonction de blocage des distractions sur votre téléphone et PC. Entièrement personnalisable, open-source et pret pour la maison connectée
+        </p>
+        <button class="bg-orange-500  text-white py-4 px-14 rounded-lg hover:bg-black cursor-pointer mx-auto block mt-3
+        ">Acheter</button>
+    </section>
+    <!--Fonctionnalités-->
+     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pb-5 opacity-80 mt-32 md:mt-0">
+        <div class="flex items-start gap-3">
+            <img src="src/assets/feature-one.svg" alt="" class="w-14">
+            <!--Fonctionnalité 1-->
+            <div>
+                <h3 class="text-xl mb-1.5">Outil de productivité</h3>
+                <div class="text-sm">Blocage des distractions, message BUSY personnalisé, minuteur de concentration, synchronisation multiplateforme </div>
+            </div>
+        </div>
+
+        <!--Fonctionnalité 2-->
+
+         <div class="flex items-start gap-3">
+            <img src="src/assets/feature-two.svg" alt="" class="w-14">
+            <div>
+                <h3 class="text-xl mb-1.5">Application et intégration</h3>
+                <div class="text-sm">Bibliothèque d'application connexion à des logiciels tiers, intégration avec les événements de calendrier et les apples</div>
+            </div>
+        </div>
+
+        <!--Fonctionnalité 3-->
+
+         <div class="flex items-start gap-3">
+            <img src="src/assets/feature-three.svg" alt="" class="w-14">
+            <div>
+                <h3 class="text-xl mb-1.5">Support maison connectée</h3>
+                <div class="text-sm">Connectez-vous à Googlz Home et Apple Home via le protocole Master</div>
+            </div>
+        </div>
+
+        <!--Fonctionnalité 4-->
+
+         <div class="flex items-start gap-3">
+            <img src="src/assets/feature-four.svg" alt="" class="w-14">
+            <div>
+                <h3 class="text-xl mb-1.5">Pour les développeurs</h3>
+                <div class="text-sm">API HTTP ouverte, SDK open-source, bibliothèque Python/Go/JavaScript sans verroullage fournisseur</div>
+            </div>
+        </div>
+    
+   
+  </section>
+  </main>
+  <!--Demo-->
+  <section class="flex h-screen">
+    <!--Description-->
+    <div class="w-1/2 my-auto ">
+        <div>
+            <h2 class="text-5xl font-merriweather">
+                Montrez que vous etes occupé
+            </h2>
+            <p class="text-xl">Empechez les autres d'iterrompre votre concentration profonde. L'écran affiche que vous etes occupé et quand vous serez à nouveau disponible.</p>
+        </div>
+        <!--Demo 1-->
+        <div class="flex items-end mt-10">
+            <img src="src/assets/demo-one.png" alt="" class="w-32 h-32 object-contain">
+            <div>
+                <h3 class="text-xl">Activation instantanée</h3>
+                <div class="text-sm">
+                Actvez et désactivez le statut BUSY manuellement avec un large bouton. Fonctionne entièrement hors ligne, sans logiciel supplémentaire requis
+                </div>
+            </div>
+            
+        </div>
+        <!--Demo 2-->
+         <div class="flex items-end mt-10">
+            <img src="src/assets/demo-two.png" alt="" class="w-32 h-32 object-contain">
+            <div>
+                <h3 class="text-xl">Set timer</h3>
+                <div class="text-sm">
+                Set an optional expiration timer BUSY using the scroll wheel t o let others know when you'll be available again
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--Video-->
+    <div class="w-1/2 relative">
+        <video src="src/assets/busy.mp4" autoplay loop muted class="absolute -z-10" ></video>
+    </div>
+  </section>
+ 
+</body>
+</html>
+<!--
+Les couleurs par défaut
+    couleur du text : text-[NOM DE LA COULEUR]-[NUANCE] ex: text-red-500
+    text-current(utilisée la couleur de l'element parent)
+La taille du texte
+    text-[TAILLE] ex: text-3xl
+    xs sm md/base lg xl 2xl 3xl ....9xl
+La couleur de fond
+    bg-[NOM]-[NUANCE] ex: bg-black
+largeur et hauteur
+    width: w-[TAILLE/PUISSANCE] ex: taille (w-2xl ..) puissance: w-10 w-1 w-0.5 etc...
+    height: h-[VALEURS/PUISSANCE]
+    valeurs : h-screen =height :100vh h-auto h-full =height:100% h-min=height:min-content h-max size-full= width:100% and height: 100%
+    size (width et height ensemble"): size-[PUISSANCE]
+    largeur et hauteur maximales et minimales:
+        min-w/max-w
+        min-h/max-h
+marges
+    margin: m-[PUISSANCE]
+        ml mr mb mt (left right bottom top) -[PUISSANCE] mx (gauche et droite) my(haut et bas)  mx-auto (centrer)
+    padding: p-[PUISSANCE]
+        pl pr pt pt (left right bottom top) -[PUISSANCE] px (gauche et droite) py(haut et bas)
+
+bordures
+    border border-2 border-4 border-8
+    border-[NOM DE LA COULEUR]-[NUANCE]
+    border(-l | -r | -b | -t | -x | -y)-2
+    border-solid border-dashed border-dotted border-double boerder-none
+    bordures arrondies
+        rouded-[TAILLE (pas d base: md)]
+        rouded-full (complètement arrondie)
+        rouded-none
+        rouded-tl-[TAILLE] tr bl br (top-left, top-right, bottom-left, bottom-right)
+
+polices
+    font-serif,font-mono
+
+ombres et opacités
+    opacity-[POURCENTAGE] ex:opacity-50 ou si on veut un élément en particulier [CLASSE]/[POURCENTAGE] ex: bg-black/50 ou text-violet-700/50
+
+    text-shadow-[TAILLE](2xs xs sm md lg) ombre texte
+
+    shadow-[TAILLE](2xs xs sm md lg xl 2xl) ombres sur element 
+    inset-shadow-[TAILLE] (2xs xs sm) ombres internes
+Les listes 
+    list-none
+    list-image-none
+    list-inside
+    list-disc
+    list-item
+    list-decimal
+    list-outside
+Les depassement
+    overflow-[hidden | scroll | clip | auto | ellipsis]
+troquer un texte
+    whitespace-nowrap + overflow-ellipsis + overflow hidden
+mettre en gras, italique, souligner
+    font-[bold | semibold | light | etc]
+    italic  not-italic
+    underline | no-underline (underline-4:l'espace entre la barre et le texte) (underline-ofset-8)
+
+Les contraires(valeurs négatives)
+    ajouter un - devant la classe utilisée
+Aligner du texte
+    text-alignement : text-[left | center | right | justify]
+Modifier le type d'un élément 
+    (block | inline-block | inline)
+Gérer les états (hover)
+    hover:[CLASSE] ex: hover:bg-blue-400
+Transition
+    duration-[PUISSANCE] ex:duration-1000
+lien visitée
+    visited:[CLASSE] ex:visited:text-violet-500
+champ input
+    focus:[CLASSE]
+modifier le curseur
+    cursor-pointer
+    cursor-not-allowed 
+    disabled:[CLASSE]
+Flexbox
+    flex
+    flex-row/flexcol flex-row-reverse/flex-col-reverse
+    gap-[PUISSANCE]
+    justify-[center start end]
+    items[start center end]
+    order
+ajouter containeur
+    container
+Définir une échelle de gris
+    grayscale-[NUANCE]
+Transformer un élément
+    translate-[PUISSANCE]
+    translate-(y x)-[PUISSANCE]
+    -translate...
+positionnement
+    absolute
+z-index
+    z-[PUISSANCE]
+object-[cover]
+Les grilles
+    grid
+    grid-cols-[NOMBRE]
+    gap-[ESPACE]
+    odrder
+responsive design(breakpoints)
+    sm (640px 40 rem) petit phone
+    md (768px 48 rem) phone
+    lg (1024px 64rem) tablette
+    xl (1280px 80rem) ordinateur
+    2xl (1536px 96rem) très grand ordinateur
+
+    ex:md:grid-cols-2 lg:grid-cols-3
+faire un dark mode
+    placer dans notre input ceci :@custom-variant dark (&:where(.dark, .dark *)); et comme classe de la balise html une class dark puis avec dark:[CLASSE] dans chaque élément qu'on veut modifier en mode sombre on définit nos classes en mode sombre
+Personnaliser tailwind CSS
+    dans notre input css on utilise @theme{}
+    ex:@theme{
+    --color-orange-500:blue;
+    --color-secondary:#999
+    --breakpoint-3xl:99rem;
+    --spacing-99:10000rem;
+    --font-merriweather:'Merriweather,arial'
+    }
+Policices google
+    dans input css @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap'); puis avec @theme on précise la police réutilisable dans notre html
+Modifier le style de base des éléments
+    sur input css ex: 
+    @layer base {
+    a{ 
+        text-decoration: underline;
+        color: blue;
+        }
+    }
+Les composants
+    pour créer des composants on va dans inût css 
+    ex:
+    @layer components{
+    .btn{
+        @apply bg-orange-500  text-white py-4 px-14 rounded-lg hover:bg-black cursor-pointer mx-auto block mt-3
+        }
+    }
+Créer une classe utilitaire
+    pour créer une nouvelle classe utilitaire dans input css 
+    ex:
+    @utility flex-centered
+    {
+        @apply flex justify-center items-center
+    }
+-->
