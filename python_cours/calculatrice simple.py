@@ -3,7 +3,7 @@ print("_____________________")
 while True:
     try :
         nombre1,nombre2=(int(input("saisir le premier nombre: ")),int(input("saisir le second nombre: ")))
-        
+
 
         operateur=input("selectionnez un opérateur(+,-,*,/): ")
         if operateur=="+":
@@ -28,4 +28,3 @@ while True:
         continue
     elif choix=="non":
         break
-     

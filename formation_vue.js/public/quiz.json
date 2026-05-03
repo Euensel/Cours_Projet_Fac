@@ -1,0 +1,34 @@
+{
+    "title": "Questionnaire sur les films et séries",
+    "minimum_score": 4,
+    "success_message": "Félicitations! Vous êtes un véritable cinéphile!",
+    "failure_message": "Dommage! Vous devriez regarder plus de films et séries.",
+    "questions": [
+        {
+            "question": "Dans quel film trouve-t-on le personnage de Jack Dawson ?",
+            "choices": ["Titanic", "Le Seigneur des Anneaux", "Inception", "Avatar"],
+            "correct_answer": "Titanic"
+        },
+        {
+            "question": "Quel est le nom du sorcier principal dans Harry Potter ?",
+            "choices": ["Gandalf", "Dumbledore", "Voldemort", "Snape"],
+            "correct_answer": "Dumbledore"
+        },
+        {
+            "question": "Dans quelle série trouve-t-on les Stark, Lannister et Targaryen ?",
+            "choices": ["Vikings", "Game of Thrones", "The Witcher", "Breaking Bad"],
+            "correct_answer": "Game of Thrones"
+        },
+        {
+            "question": "Quel film met en scène un rêve dans un rêve ?",
+            "choices": ["Matrix", "Inception", "Interstellar", "Tenet"],
+            "correct_answer": "Inception"
+        },
+        {
+            "question": "Qui est le héros principal de la série Breaking Bad ?",
+            "choices": ["Jesse Pinkman", "Walter White", "Saul Goodman", "Gus Fring"],
+            "correct_answer": "Walter White"
+        }
+     
+    ]
+}

@@ -42,7 +42,7 @@ WHERE fv_players.player_ability IS NULL;--affiche uniquement les champ de fv_abi
 
 SELECT *
 FROM fv_items
-RIGHT JOIN  fv_playertrades ON fv_items.id_item=fv_playertrades.playertrade_item;--affiche la listes des objet vendu (playertrade_item) l'id de vente (id_item) prendra la valeur de chaque ogjet correspondant dans playertrade_item puis on affichera juste le nom
+RIGHT JOIN  fv_playertrades ON fv_items.id_item=fv_playertrades.playertrade_item;--affiche la liste des objet vendu (playertrade_item) l'id de vente (id_item) prendra la valeur de chaque ogjet correspondant dans playertrade_item puis on affichera juste le nom
 
 SELECT item_name
 FROM fv_items
