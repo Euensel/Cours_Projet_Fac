@@ -1,0 +1,138 @@
+
+==============================================
+📘 LARAVEL – ELOQUENT ORM
+==============================================
+
+1️⃣ Qu’est-ce qu’Eloquent ?
+----------------------------------------------
+Eloquent est l’ORM (Object Relational Mapping) de Laravel.
+
+👉 Il permet de :
+    - manipuler la base de données
+    - sans écrire directement du SQL
+    - en utilisant des classes PHP (Models)
+
+Chaque modèle Eloquent représente :
+    - une table de la base de données
+    - et chaque instance du modèle représente
+      une ligne de cette table.
+
+----------------------------------------------
+2️⃣ Le lien entre Model et base de données
+----------------------------------------------
+Un Model Eloquent :
+
+    - est une classe PHP
+    - représente une table
+    - porte généralement le même nom que la table
+      (au singulier)
+
+Exemple logique :
+    Model  →  table en base de données
+
+👉 Eloquent s’occupe automatiquement :
+    - des requêtes SQL
+    - de l’hydratation des objets
+    - de la conversion des données
+
+----------------------------------------------
+3️⃣ Requêtes simples avec Eloquent
+----------------------------------------------
+Avec Eloquent, on peut :
+
+    - récupérer des données
+    - insérer des données
+    - modifier des données
+    - supprimer des données
+
+Le tout avec une syntaxe lisible et orientée objet.
+
+👉 Cela rend le code :
+    - plus clair
+    - plus maintenable
+    - plus proche de la logique métier
+
+----------------------------------------------
+4️⃣ Le casting des attributs
+----------------------------------------------
+Par défaut, les données récupérées depuis la base
+sont retournées sous forme de chaînes de caractères.
+
+Eloquent permet de "caster" les champs,
+c’est-à-dire forcer leur type PHP.
+
+----------------------------------------------
+5️⃣ Casts au niveau du Model
+----------------------------------------------
+Dans un Model, on peut définir une méthode casts().
+
+Cette méthode retourne un tableau associatif
+qui précise le type de chaque champ.
+
+Exemple de logique :
+    protected function casts() : array
+    {
+        return [
+            'ingredients' => 'array',
+        ];
+    }
+
+👉 Ici :
+    - le champ "ingredients" sera automatiquement
+      converti en tableau PHP
+    - et retransformé correctement lors de l’enregistrement
+
+----------------------------------------------
+6️⃣ Casts sur une requête spécifique
+----------------------------------------------
+Parfois, on ne veut pas caster un champ
+pour tout le modèle.
+
+Dans ce cas, on peut caster uniquement
+sur une requête donnée.
+
+On utilise alors la méthode withCasts().
+
+Exemple de logique :
+    withCasts([
+        'ingredients' => 'array'
+    ]);
+
+👉 Le cast ne s’applique que :
+    - à cette requête
+    - et pas globalement au modèle
+
+----------------------------------------------
+7️⃣ Pourquoi utiliser les casts ?
+----------------------------------------------
+Les casts permettent :
+    - d’éviter les conversions manuelles
+    - d’avoir des types cohérents
+    - de simplifier la logique dans les vues
+      et les contrôleurs
+
+👉 Exemples courants de casts :
+    - array
+    - boolean
+    - integer
+    - float
+    - datetime
+
+----------------------------------------------
+8️⃣ Avantages d’Eloquent
+----------------------------------------------
+✔ Syntaxe claire et expressive  
+✔ Moins de SQL à écrire  
+✔ Intégration naturelle avec MVC  
+✔ Facilité pour gérer les relations  
+✔ Gain de temps et lisibilité du code  
+
+----------------------------------------------
+✅ Conclusion
+----------------------------------------------
+Eloquent est au cœur de Laravel.
+
+Il permet de :
+    - travailler avec la base de données
+    - de façon orientée objet
+    - propre, lisible et efficace

@@ -1,0 +1,103 @@
+
+==============================================
+📘 LARAVEL – LE M DANS MVC (MODEL)
+==============================================
+
+1️⃣ MVC : architecture de Laravel
+----------------------------------------------
+Laravel utilise l’architecture MVC.
+
+MVC signifie :
+    - 🧠 M → Model
+    - 👀 V → View
+    - 🎮 C → Controller
+
+Chaque partie a un rôle précis :
+    - Le Model gère les données
+    - La View affiche les données
+    - Le Controller fait le lien entre les deux
+
+----------------------------------------------
+2️⃣ Rôle des Models
+----------------------------------------------
+Les Models représentent directement les tables
+de la base de données.
+
+➡️ 1 Model = 1 table (en général)
+
+Exemples :
+    - User    → table users
+    - Post    → table posts
+    - Product → table products
+
+----------------------------------------------
+3️⃣ Contenu d’un Model
+----------------------------------------------
+Un Model contient :
+
+🔹 Une classe
+    - Le nom de la classe correspond au fichier
+    - Le nom est généralement au singulier
+
+🔹 Des méthodes
+    - Ces méthodes permettent :
+        • de récupérer des données
+        • de filtrer des données
+        • de structurer la logique liée à la table
+
+💡 Bonne pratique :
+    - Toujours typer le retour des méthodes
+    - Le code est plus lisible et plus fiable
+
+----------------------------------------------
+4️⃣ Utilisation des Models
+----------------------------------------------
+
+- Créer un Model avec la commande Artisan :
+    - php artisan make:model NomModel -m 
+        -m signifie "migration" (donc, il créera une migration)
+
+Les méthodes définies dans un Model peuvent être
+utilisées partout dans l’application :
+    - Controllers
+    - Services
+    - Commandes
+    - etc.
+
+👉 Le Model centralise toute la logique liée aux données
+
+----------------------------------------------
+5️⃣ Astuce : gérer les styles actifs dans les vues
+----------------------------------------------
+Dans les vues, on a souvent des liens de navigation.
+
+Problème :
+    - Le style du lien actif peut disparaître
+      selon la route actuelle (.index, .show, etc.)
+
+Solution :
+    - Utiliser fnmatch() avec un wildcard (*)
+
+Exemple de logique :
+    fnmatch('nomroute.*', Route::currentRouteName())
+
+Explication :
+    - 'nomroute.*' correspond à :
+        • nomroute.index
+        • nomroute.show
+        • nomroute.edit
+        • etc.
+
+👉 Très utile pour :
+    - menus actifs
+    - liens en gras
+    - états visuels dynamiques
+
+----------------------------------------------
+✅ Résumé
+----------------------------------------------
+✔ Laravel utilise l’architecture MVC
+✔ Le Model représente une table de la base de données
+✔ Le Model contient la logique liée aux données
+✔ Les méthodes du Model sont réutilisables
+✔ fnmatch() permet de gérer les routes actives proprement

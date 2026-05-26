@@ -1,0 +1,312 @@
+COURS COMPLET : INERTIA.JS AVEC LARAVEL + REACT
+=============================================
+
+1. DEFINITION
+-------------
+Inertia.js est une bibliothèque qui permet de créer des applications
+Single Page Application (SPA) avec Laravel sans créer une API REST.
+
+Avec Inertia :
+- Laravel reste le backend
+- React est utilisé pour l’interface
+- Pas de routes API
+- Pas de JSON manuel
+
+Le contrôleur Laravel envoie directement des pages React.
+
+------------------------------------------------------------
+
+2. POURQUOI INERTIA + REACT
+--------------------------
+Sans Inertia :
+- Blade recharge la page
+- SPA classique = API + Auth compliquée
+
+Avec Inertia + React :
+- Un seul projet
+- Routes Laravel normales
+- Auth Laravel classique (sessions)
+- Navigation fluide (SPA)
+
+------------------------------------------------------------
+
+3. PRINCIPE DE FONCTIONNEMENT
+-----------------------------
+Flux de fonctionnement :
+
+Route (web.php)
+→ Controller Laravel
+→ Inertia::render()
+→ Page React
+→ Affichage sans rechargement
+
+------------------------------------------------------------
+
+4. STRUCTURE DU PROJET
+---------------------
+resources/
+ ├── views/
+ │     └── app.blade.php
+ └── js/
+       ├── Pages/
+       ├── Components/
+       └── app.jsx
+
+------------------------------------------------------------
+
+5. INSTALLATION
+---------------
+Backend :
+- inertiajs/inertia-laravel
+
+Frontend :
+- @inertiajs/react
+- react
+- react-dom
+
+Un middleware Inertia est utilisé pour partager les données.
+
+------------------------------------------------------------
+
+6. LAYOUT BLADE UNIQUE
+----------------------
+Laravel utilise une seule vue Blade :
+
+- contient @inertia
+- contient @vite
+- point d’entrée React
+
+Toutes les pages viennent de React.
+
+------------------------------------------------------------
+
+7. CONFIGURATION REACT
+----------------------
+Inertia initialise React via createInertiaApp.
+
+Les pages React sont chargées dynamiquement depuis le dossier Pages.
+
+Le nom passé à Inertia::render()
+doit correspondre au nom du fichier React.
+
+------------------------------------------------------------
+
+8. CREER UNE PAGE REACT INERTIA
+-------------------------------
+Une page Inertia est un composant React.
+
+Elle reçoit des props envoyées par Laravel.
+
+Exemple :
+- Inertia::render('Home')
+→ Home.jsx
+
+------------------------------------------------------------
+
+9. CONTROLLER LARAVEL
+---------------------
+Au lieu de retourner une vue Blade,
+le contrôleur retourne une page React :
+
+return Inertia::render('Home', [
+    'message' => 'Bonjour depuis Laravel'
+]);
+
+Les données deviennent des props React.
+
+-----------------------
+
+6. PREMIER EXEMPLE SIMPLE
+-------------------------
+OBJECTIF : afficher un message depuis Laravel dans React.
+
+ROUTE (routes/web.php)
+----------------------
+Route::get('/', [HomeController::class, 'index']);
+
+CONTROLLER (HomeController.php)
+-------------------------------
+public function index()
+{
+    return Inertia::render('Home', [
+        'message' => 'Bonjour depuis Laravel'
+    ]);
+}
+
+PAGE REACT (resources/js/Pages/Home.jsx)
+----------------------------------------
+Le composant reçoit les données en props.
+
+Exemple logique :
+- Laravel envoie "message"
+- React l’affiche
+
+RESULTAT :
+----------
+La page s’affiche sans rechargement
+et montre le message venant du backend.
+
+------------------------------------------------------------
+
+7. NAVIGATION AVEC INERTIA (EXEMPLE)
+------------------------------------
+OBJECTIF : naviguer sans recharger la page.
+
+ROUTE
+-----
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+CONTROLLER
+----------
+return Inertia::render('Dashboard');
+
+LIEN REACT
+----------
+On utilise le composant Link fourni par Inertia.
+
+Principe :
+- Pas de <a href="">
+- Utilisation de <Link>
+
+RESULTAT :
+----------
+Navigation fluide, effet SPA, pas de refresh.
+
+------------------------------------------------------------
+
+8. FORMULAIRE AVEC INERTIA (EXEMPLE)
+------------------------------------
+OBJECTIF : envoyer un formulaire sans API.
+
+PAGE REACT (Login.jsx)
+----------------------
+Inertia fournit useForm pour gérer les formulaires.
+
+Champs :
+- email
+- password
+
+Au submit :
+- envoi POST vers Laravel
+- récupération automatique des erreurs
+
+CONTROLLER LARAVEL
+------------------
+public function login(Request $request)
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ]);
+
+    // traitement login
+}
+
+RESULTAT :
+----------
+- Validation côté Laravel
+- Erreurs visibles côté React
+- Pas de reload
+
+------------------------------------------------------------
+
+9. VALIDATION ET ERREURS
+-----------------------
+Quand Laravel valide :
+
+$request->validate([...]);
+
+Inertia :
+- récupère automatiquement les erreurs
+- les envoie au composant React
+
+Dans React :
+- erreurs accessibles via form.errors
+
+------------------------------------------------------------
+
+10. AUTHENTIFICATION (EXEMPLE)
+------------------------------
+Inertia utilise l’auth Laravel classique.
+
+ROUTE PROTEGEE
+--------------
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware('auth');
+
+CONTROLLER
+----------
+Auth::user() fonctionne normalement.
+
+RESULTAT :
+----------
+- sessions Laravel
+- middleware auth
+- sécurité intacte
+
+------------------------------------------------------------
+
+11. DONNEES GLOBALES (EXEMPLE)
+------------------------------
+OBJECTIF : accéder à l’utilisateur connecté partout.
+
+Dans HandleInertiaRequests.php :
+- partager auth.user
+
+Côté React :
+- accessible dans toutes les pages
+
+------------------------------------------------------------
+
+12. COMPOSANTS REUTILISABLES
+----------------------------
+Navbar.jsx :
+- menu
+- liens Inertia
+- infos utilisateur
+
+Utilisé dans plusieurs pages.
+
+------------------------------------------------------------
+
+13. ERREURS COURANTES (AVEC EXEMPLES)
+------------------------------------
+Erreur : Inertia::render('home')
+Mais fichier : Home.jsx
+→ casse sensible
+
+Erreur :
+Utiliser <a href=""> au lieu de <Link>
+→ rechargement de page
+
+Erreur :
+Créer une API en parallèle
+→ inutile avec Inertia
+
+------------------------------------------------------------
+
+14. CAS CONCRET : DASHBOARD
+---------------------------
+Laravel :
+- récupère les données (stats, utilisateurs, offres)
+
+Inertia :
+- transmet les données
+
+React :
+- affiche graphiques et tableaux
+
+Tout dans un seul projet.
+
+------------------------------------------------------------
+
+15. POURQUOI INERTIA + REACT EST PUISSANT
+-----------------------------------------
+- Backend solide (Laravel)
+- Front moderne (React)
+- Pas d’API REST
+- Sécurité native
+- Développement rapide
+
+------------------------------------------------------------

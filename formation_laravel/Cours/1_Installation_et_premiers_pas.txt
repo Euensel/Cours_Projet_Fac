@@ -1,0 +1,78 @@
+
+==============================================
+🚀 LARAVEL - INSTALLATION & PREMIERS PAS
+==============================================
+
+Un tour des dossiers et fichiers les plus importants, 
+avec des explications simples et claires. 
+
+----------------------------------------------
+📁 1. LE DOSSIER APP
+----------------------------------------------
+C’est le cœur de ton application.
+    - 🧭 Http/ : traite tout ce qui est lié aux requêtes HTTP.
+    - 🎛️ Controllers/ : contrôlent les entrées et sorties de tes pages.
+    - 🗄️ Models/ : représentent les tables de ta base de données.
+    - 🛠️ Providers/ : services avancés (on verra plus tard).
+
+----------------------------------------------
+📁 2. LE DOSSIER BOOTSTRAP
+----------------------------------------------
+Il initialise ton application.  
+Le fichier principal `app.php` configure le routing, les middlewares et plus.
+
+----------------------------------------------
+📁 3. LE DOSSIER CONFIG
+----------------------------------------------
+Contient tous les fichiers de configuration de ton application :  
+base de données, mail, cache, etc.
+
+----------------------------------------------
+📁 4. LE DOSSIER DATABASE
+----------------------------------------------
+Gère tout ce qui touche à la base de données :
+    - 🏭 Factories/ : pour générer de fausses données.
+    - 📜 Migrations/ : garde un historique des modifications de la BDD.
+    - 🌱 Seeders/ : pour remplir la base manuellement.
+
+----------------------------------------------
+📁 5. LE DOSSIER PUBLIC
+----------------------------------------------
+C’est la partie visible de ton site.  
+Il contient : CSS, JS, images et autres fichiers statiques.
+
+----------------------------------------------
+📁 6. LE DOSSIER RESOURCES
+----------------------------------------------
+Contient les fichiers que tu crées pour l’interface :
+    - 🖼️ Views/ : les pages avec Blade.
+    - 🎨 Css/ : par défaut avec Tailwind.
+    - 🖥️ Js/ : scripts Javascript.
+
+----------------------------------------------
+📁 7. LE DOSSIER ROUTES
+----------------------------------------------
+Gère les URL de ton application :
+    - 🛣️ web.php : routes pour les pages web.
+    - 🖥️ console.php : commandes artisan.
+
+----------------------------------------------
+📁 8. LE DOSSIER STORAGE
+----------------------------------------------
+Stocke tout ce que Laravel utilise en interne :
+    - ⚡ Cache, sessions
+    - 📄 Logs (erreurs)
+    - 👁️ Vues compilées
+
+----------------------------------------------
+📁 9. LE DOSSIER TEST
+----------------------------------------------
+Pour tester ton code avec des tests unitaires.
+
+----------------------------------------------
+📁 10. LE DOSSIER VENDOR
+----------------------------------------------
+Toutes les dépendances installées avec Composer.  
+Ne jamais toucher à ce dossier.
+
+

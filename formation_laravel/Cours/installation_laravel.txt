@@ -1,0 +1,43 @@
+==============================================
+        INSTALLATION ET PREMIER PROJET LARAVEL
+==============================================
+
+Prérequis :
+-------------
+- Avoir PHP installé sur le système
+- Avoir Composer installé
+
+----------------------------------------------------------
+🔹 Créer un projet Laravel via laravel installer
+----------------------------------------------------------
+
+Pour créer un nouveau projet Laravel, utiliser la commande :
+
+    laravel new nom_projet
+
+	ou
+   
+    composer create-project laravel/laravel nom_projet
+
+----------------------------------------------
+🔹 Exécuter l'application via le serveur local PHP
+----------------------------------------------s
+
+1️⃣ Avec le serveur intégré de PHP :
+
+    php -S localhost:8000 -t public
+
+Explications :
+- php : lance l'interpréteur PHP
+- -S localhost:8000 : démarre le serveur sur localhost et port 8000
+- -t public : définit le dossier racine du serveur (Laravel : dossier "public")
+
+Ensuite, ouvrir dans le navigateur : http://localhost:8000
+
+2️⃣ Avec la commande Laravel (plus simple) :
+
+    php artisan serve
+
+- Démarre automatiquement le serveur sur localhost:8000
+- Pas besoin de spécifier le dossier "public"
+

@@ -1,0 +1,162 @@
+
+===========================================================
+🎨 LARAVEL — DÉCOUVERTE DE BLADE & TAILWINDCSS
+===========================================================
+
+Blade est le moteur de template intégré de Laravel.  
+TailwindCSS est le framework CSS utilitaire par défaut dans les 
+nouvelles installations de Laravel.  
+
+-----------------------------------------------------------
+📌 1. INTRODUCTION À BLADE
+-----------------------------------------------------------
+Blade te permet d’écrire du HTML avec une syntaxe simplifiée :
+- Des variables
+- Des conditions
+- Des boucles
+- Des layouts (héritage)
+- Des composants réutilisables
+
+Les fichiers Blade portent l’extension :  
+    *.blade.php*  
+
+Ils se trouvent dans :  
+    resources/views/
+
+-----------------------------------------------------------
+📌 2. AFFICHER DES VARIABLES
+-----------------------------------------------------------
+Pour afficher une variable envoyée depuis un controller :
+
+    {{ $name }}
+    {{ $user->email }}
+
+Blade protège automatiquement des attaques XSS.  
+Pour afficher du HTML “brut” :
+
+    {!! $contenu !!}
+
+-----------------------------------------------------------
+📌 3. CONDITIONS
+-----------------------------------------------------------
+    @if($age >= 18)
+        <p>Tu es majeur.</p>
+    @else
+        <p>Mineur détecté.</p>
+    @endif
+
+Autres syntaxes utiles :
+    @isset($user)
+    @empty($liste)
+    @auth / @guest 
+
+-----------------------------------------------------------
+📌 4. BOUCLES
+-----------------------------------------------------------
+    @foreach($users as $user)
+        <p>{{ $user->name }}</p>
+    @endforeach
+
+    @for($i = 0; $i < 10; $i++)
+        ...
+    @endfor
+
+    @forelse($liste as $item)
+        ...
+    @empty
+        <p>Aucun résultat.</p>
+    @endforelse
+
+-----------------------------------------------------------
+📌 5. LAYOUT : LE PRINCIPE D’HÉRITAGE
+-----------------------------------------------------------
+Blade permet d’éviter de répéter l’en-tête, le menu, etc.
+Par convention, le nom du layout principal est `app.blade.php`.
+
+Layout : resources/views/layouts/app.blade.php
+
+    <!DOCTYPE html>
+    <html>
+        <body>
+            @yield('content') -> indique le contenu dynamique de la page
+        </body>
+    </html>
+
+Page qui hérite du layout :
+
+    @extends('layouts.app')
+
+    @section('content')
+        <h1>Bienvenue</h1>
+    @endsection
+
+-----------------------------------------------------------
+📌 6. LES COMPOSANTS BLADE
+-----------------------------------------------------------
+Ce sont des mini-vues réutilisables.
+
+Créer un composant :
+    php artisan make:component Alert
+
+Laravel crée :
+- app/View/Components/Alert.php
+- resources/views/components/alert.blade.php
+
+Dans une vue :
+    <x-alert message="Erreur détectée !" />
+
+
+Dans le composant : 
+    La variable $slot : contient le contenu entre les balises.
+    La variable $attributes : contient les attributs HTML passés.
+
+Utile pour :
+- les cartes
+- les boutons
+- les messages flash
+- les formulaires
+
+-----------------------------------------------------------
+📌 7. INCLURE UNE VUE DANS UNE AUTRE
+-----------------------------------------------------------
+    @include('partials.header')
+
+Les données peuvent être envoyées :
+    @include('card', ['titre' => 'Laravel'])
+
+-----------------------------------------------------------
+📌 8. ACTIVATION DE TAILWINDCSS DANS BLADE
+-----------------------------------------------------------
+Après installation d’un projet Laravel frais, Tailwind est déjà configuré,
+il faut juste lancer :
+
+    npm install
+    npm run dev
+
+Ensuite, dans tes vues Blade :
+    <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
+
+(Laravel Mix ou Vite s’en occupe selon la version.)
+
+Ensuite tu peux utiliser Tailwind dans n’importe quel template Blade.
+
+-----------------------------------------------------------
+📌 9. LES DIRECTIVES UTILES À RETENIR
+-----------------------------------------------------------
+- @csrf → pour les formulaires
+- @method('PUT') → spoofing HTTP
+- @vite → inclure les assets
+- @php … @endphp → exécuter du PHP
+- @dump ou @dd → debug rapide
+- @props → définir les props d’un composant (un tableau associatif)
+
+-----------------------------------------------------------
+📌 10. CE QU’IL FAUT ABSOLUMENT RETENIR
+-----------------------------------------------------------
+✔ Blade = HTML simplifié + logique légère  
+✔ Système de layouts = évite les répétitions  
+✔ Composants = réutilisables partout  
+✔ Tailwind = intégré et directement utilisable  
+✔ Blade protège automatiquement des attaques XSS
+
+

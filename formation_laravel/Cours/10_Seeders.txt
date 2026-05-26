@@ -1,0 +1,137 @@
+
+==============================================
+📘 LARAVEL – LES SEEDERS
+==============================================
+
+1️⃣ Définition
+----------------------------------------------
+Les seeders servent à remplir
+la base de données avec des données.
+
+👉 Ils utilisent souvent les factories
+pour insérer plusieurs enregistrements
+automatiquement.
+
+----------------------------------------------
+2️⃣ Rôle des Seeders
+----------------------------------------------
+Un seeder permet de :
+
+    - peupler la base de données
+    - préparer des données de test
+    - avoir une base cohérente au démarrage
+    - éviter les insertions manuelles
+
+----------------------------------------------
+3️⃣ Création d’un Seeder
+----------------------------------------------
+Pour créer un seeder :
+
+    php artisan make:seeder NomSeeder
+
+Le fichier sera créé dans :
+
+    database/seeders/
+
+----------------------------------------------
+4️⃣ Structure d’un Seeder
+----------------------------------------------
+Un seeder est une classe
+qui hérite de Seeder.
+
+Il contient une méthode :
+
+    run()
+
+👉 Tout le code d’insertion
+se fait dans cette méthode.
+
+----------------------------------------------
+5️⃣ Exemple simple de Seeder
+----------------------------------------------
+Exemple logique d’un seeder :
+
+    class UserSeeder extends Seeder
+    {
+        public function run(): void
+        {
+            User::factory()->count(10)->create();
+        }
+    }
+
+👉 Ici, on utilise une factory
+pour créer 10 utilisateurs.
+
+----------------------------------------------
+6️⃣ Seeder principal : DatabaseSeeder
+----------------------------------------------
+Laravel utilise un seeder principal :
+
+    DatabaseSeeder.php
+
+C’est lui qui appelle
+tous les autres seeders.
+
+Exemple :
+
+    class DatabaseSeeder extends Seeder
+    {
+        public function run(): void
+        {
+            $this->call([
+                UserSeeder::class,
+            ]);
+        }
+    }
+
+----------------------------------------------
+7️⃣ Exécuter les Seeders
+----------------------------------------------
+Pour lancer tous les seeders :
+
+    php artisan db:seed
+
+Pour lancer les migrations + seeders :
+
+    php artisan migrate --seed
+
+----------------------------------------------
+8️⃣ Lancer un Seeder spécifique
+----------------------------------------------
+On peut lancer un seeder précis :
+
+    php artisan db:seed --class=UserSeeder
+
+👉 Utile pour tester
+un seeder en particulier.
+
+----------------------------------------------
+9️⃣ Lien entre Factory et Seeder
+----------------------------------------------
+Factory :
+    - définit comment générer les données
+
+Seeder :
+    - décide quand et combien de données créer
+
+👉 Les deux travaillent ensemble.
+
+----------------------------------------------
+🔟 Bonnes pratiques
+----------------------------------------------
+✔ Utiliser les factories dans les seeders  
+✔ Séparer les seeders par type de données  
+✔ Centraliser l’appel dans DatabaseSeeder  
+
+----------------------------------------------
+✅ Conclusion
+----------------------------------------------
+Les seeders :
+
+    - remplissent la base de données
+    - utilisent souvent les factories
+    - facilitent les tests et le développement
+    - rendent l’application prête rapidement
+
+Ils sont indispensables
+dans un vrai projet Laravel.

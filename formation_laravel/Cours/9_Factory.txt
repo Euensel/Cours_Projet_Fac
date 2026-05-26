@@ -1,0 +1,134 @@
+
+==============================================
+📘 LARAVEL – LES FACTORIES
+==============================================
+
+1️⃣ Définition
+----------------------------------------------
+Une factory sert à générer automatiquement
+des données fictives pour un Model.
+
+👉 Elle permet de créer rapidement
+des enregistrements en base de données
+sans saisir les données à la main.
+
+----------------------------------------------
+2️⃣ Création d’une Factory
+----------------------------------------------
+Pour créer une factory, on peut utiliser Artisan :
+
+    php artisan make:factory NomFactory
+
+En général, on lie la factory à un Model :
+
+    php artisan make:factory NomFactory --model=NomModel
+
+----------------------------------------------
+3️⃣ Emplacement
+----------------------------------------------
+Les factories se trouvent dans :
+
+    database/factories/
+
+Chaque factory correspond
+à un Model précis.
+
+----------------------------------------------
+4️⃣ Structure d’une Factory
+----------------------------------------------
+Une factory est une classe
+qui hérite de Factory.
+
+Elle contient une méthode :
+
+    definition()
+
+👉 Cette méthode retourne un tableau.
+Chaque clé représente une colonne
+de la table en base de données.
+
+----------------------------------------------
+5️⃣ Exemple simple de Factory
+----------------------------------------------
+Exemple logique d’une factory :
+
+    class UserFactory extends Factory
+    {
+        public function definition(): array
+        {
+            return [
+                'name'  => fake()->name(),
+                'email' => fake()->unique()->safeEmail(),
+            ];
+        }
+    }
+
+👉 fake() permet d’accéder à Faker
+pour générer des données réalistes.
+
+Dans le model, ajouter : 
+
+    use HasFactory;
+
+----------------------------------------------
+6️⃣ Utilisation d’une Factory
+----------------------------------------------
+Depuis le code, on peut utiliser
+la factory associée au Model.
+
+Créer un enregistrement avec tinker :
+
+    User::factory()->create();
+
+Créer plusieurs enregistrements :
+
+    User::factory()->count(10)->create();
+
+Créer sans enregistrer en base :
+
+    User::factory()->make();
+
+----------------------------------------------
+7️⃣ Différence entre make() et create()
+----------------------------------------------
+make()
+    - crée l’objet
+    - ne l’enregistre pas en base
+
+create()
+    - crée l’objet
+    - l’enregistre en base de données
+
+----------------------------------------------
+8️⃣ Passer des valeurs personnalisées
+----------------------------------------------
+On peut remplacer certaines valeurs :
+
+    User::factory()->create([
+        'name' => 'Toussaint'
+    ]);
+
+👉 Les autres champs
+seront générés automatiquement.
+
+----------------------------------------------
+9️⃣ Pourquoi utiliser les Factories ?
+----------------------------------------------
+✔ Gain de temps  
+✔ Pas de saisie manuelle  
+✔ Données réalistes  
+✔ Parfait pour les tests et le développement  
+
+----------------------------------------------
+✅ Conclusion
+----------------------------------------------
+Les factories :
+
+    - génèrent des données automatiquement
+    - sont liées aux Models
+    - utilisent Faker
+    - simplifient le développement
+
+Elles sont une base essentielle
+avant d’aborder les seeders et les tests.
+

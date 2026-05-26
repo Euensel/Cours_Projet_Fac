@@ -1,0 +1,73 @@
+
+==============================================
+📘 LARAVEL – PASSER DES DONNÉES AUX VUES
+==============================================
+
+1️⃣ Création d’une route
+------------------------------------------
+Dans web.php, on peut créer une route simple et lui donner un nom :
+
+Route::get('/exemple', function () {
+    // Logique ici
+})->name('exemple.index');
+
+💡 Nomenclature des routes :
+    - .index → liste toutes les ressources
+    - .show  → affiche une ressource spécifique
+
+----------------------------------------------
+2️⃣ Passer des données à une vue
+----------------------------------------------
+
+🔹 Méthode 1 : avec un tableau associatif
+-----------------------------------------
+Route::get('/exemple', function () {
+    $variable = 'Valeur';
+
+    return view('exemple.index', [
+        'nom_variable' => $variable
+    ]);
+});
+
+- Dans la vue (exemple.index.blade.php) :
+<h1>{{ $nom_variable }}</h1>
+
+🔹 Méthode 2 : avec compact() (PHP pur)
+----------------------------------------
+$variable = 'Valeur';
+return view('exemple.index', compact('variable'));
+
+- compact() transforme automatiquement la variable en tableau clé → valeur
+
+----------------------------------------------
+3️⃣ Récupérer des données dynamiques depuis l’URL
+----------------------------------------------
+Route::get('/exemple/{id}', function ($id) {
+    return "Valeur reçue : $id";
+});
+
+- $id correspond à la valeur passée dans l’URL
+- Exemple : /exemple/5 → $id = 5
+
+----------------------------------------------
+4️⃣ Astuce : utiliser les helpers Laravel Arr
+----------------------------------------------
+use Illuminate\Support\Arr;
+
+🔹 Arr::get()
+$valeur = Arr::get($array, $key, $default);
+
+- $array   → tableau à parcourir
+- $key     → clé à récupérer
+- $default → valeur par défaut si la clé n’existe pas
+- Dot notation possible : 
+    $valeur = Arr::get($array, 'exemple.sous_cle');
+
+----------------------------------------------
+✅ Récapitulatif
+----------------------------------------------
+✔ Passer des données aux vues : tableau associatif ou compact()
+✔ Routes .index → liste des ressources
+✔ Routes .show  → affiche une ressource spécifique
+✔ Récupérer des données depuis l’URL : {param}
+✔ Helper Arr::get() pour accéder facilement aux tableaux

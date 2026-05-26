@@ -1,0 +1,138 @@
+
+==============================================
+📘 LARAVEL – RELATIONS ELOQUENT
+📌 hasMany & belongsTo
+==============================================
+
+1️⃣ Pourquoi les relations ?
+----------------------------------------------
+Dans une base de données relationnelle,
+les tables sont liées entre elles.
+
+Laravel, via Eloquent, permet de représenter
+ces liens directement dans les Models.
+
+👉 Objectif :
+    - éviter les jointures SQL manuelles
+    - écrire un code plus lisible
+    - refléter la logique métier de l’application
+
+----------------------------------------------
+2️⃣ Relation "hasMany"
+----------------------------------------------
+La relation hasMany signifie :
+
+👉 Un élément peut être lié
+    à plusieurs autres éléments.
+
+Autrement dit :
+    - une ligne de la table A
+    - peut correspondre à plusieurs lignes
+      dans la table B
+
+Cette relation est définie :
+    - dans le Model "parent"
+
+----------------------------------------------
+3️⃣ Définir une relation hasMany
+----------------------------------------------
+Dans le Model parent, on crée une méthode.
+
+Cette méthode :
+    - ne prend pas de paramètre
+    - retourne une relation Eloquent
+
+Structure générale :
+    public function elements()
+    {
+        return $this->hasMany(AutreModel::class);
+    }
+
+👉 Eloquent comprend automatiquement :
+    - la clé étrangère
+    - le lien entre les deux tables
+
+----------------------------------------------
+4️⃣ Relation "belongsTo"
+----------------------------------------------
+La relation belongsTo est l’inverse de hasMany.
+
+👉 Elle signifie :
+    - cet élément appartient à un autre élément
+    - il dépend d’un parent
+
+Cette relation est définie :
+    - dans le Model "enfant"
+
+----------------------------------------------
+5️⃣ Définir une relation belongsTo
+----------------------------------------------
+Dans le Model enfant, on crée une méthode.
+
+Structure générale :
+    public function parent()
+    {
+        return $this->belongsTo(ParentModel::class);
+    }
+
+👉 Eloquent cherche automatiquement :
+    - une clé étrangère dans la table enfant
+    - qui pointe vers la table parente
+
+----------------------------------------------
+6️⃣ Logique entre hasMany et belongsTo
+----------------------------------------------
+Ces deux relations vont toujours ensemble.
+
+👉 Si un Model a :
+    - hasMany
+L’autre Model aura forcément :
+    - belongsTo
+
+C’est cette combinaison qui permet
+à Laravel de naviguer entre les données.
+
+----------------------------------------------
+7️⃣ Utilisation des relations
+----------------------------------------------
+Une fois les relations définies :
+
+    - on peut accéder aux données liées
+    - comme à une propriété
+
+👉 Avantage :
+    - pas besoin d’écrire de requêtes SQL
+    - Eloquent s’occupe de tout
+
+----------------------------------------------
+8️⃣ Chargement des relations
+----------------------------------------------
+Par défaut, les relations sont chargées
+lorsqu’on y accède.
+
+Laravel permet aussi de :
+    - charger les relations à l’avance
+    - pour améliorer les performances
+
+👉 Cela évite le problème du N+1.
+
+----------------------------------------------
+9️⃣ Bonnes pratiques
+----------------------------------------------
+✔ Nommer les méthodes au pluriel pour hasMany  
+✔ Nommer les méthodes au singulier pour belongsTo  
+✔ Toujours définir les deux côtés de la relation  
+✔ Garder une logique claire entre les Models  
+
+----------------------------------------------
+✅ Conclusion
+----------------------------------------------
+Les relations hasMany et belongsTo :
+
+    - sont la base des relations Eloquent
+    - reflètent fidèlement les relations SQL
+    - rendent le code plus propre et expressif
+
+Bien les comprendre,
+c’est comprendre le cœur d’Eloquent.
+

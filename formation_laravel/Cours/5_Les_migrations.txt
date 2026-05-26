@@ -1,0 +1,124 @@
+
+==============================================
+📘 LARAVEL – LES MIGRATIONS
+==============================================
+
+1️⃣ Qu’est-ce qu’une migration ?
+----------------------------------------------
+Les migrations sont des scripts SQL écrits en PHP.
+
+Elles permettent de :
+    - créer des tables
+    - modifier des tables
+    - supprimer des tables
+
+👉 On peut voir les migrations comme un système
+de versionning de la base de données.
+
+----------------------------------------------
+2️⃣ Structure d’un fichier de migration
+----------------------------------------------
+Un fichier de migration :
+
+🔹 Retourne une classe anonyme
+🔹 Cette classe hérite de la classe Migration
+🔹 Elle contient deux méthodes principales :
+
+    - up()
+    - down()
+
+----------------------------------------------
+3️⃣ Rôle des méthodes up() et down()
+----------------------------------------------
+🔼 Méthode up()
+    - Exécutée quand on lance une migration
+    - Sert à créer ou modifier la structure
+      de la base de données
+
+🔽 Méthode down()
+    - Exécutée lors d’un rollback
+    - Sert à annuler ce qui a été fait dans up()
+
+----------------------------------------------
+4️⃣ Création d’une table (méthode up)
+----------------------------------------------
+Dans la méthode up(), on utilise le Schema Builder.
+
+Exemple de logique :
+    Schema::create('nom_de_la_table', function (Blueprint $table) {
+        // définition des colonnes
+    });
+
+👉 Le paramètre $table permet d’interagir
+avec la structure de la table :
+    - colonnes
+    - clés primaires
+    - index
+    - relations
+
+----------------------------------------------
+5️⃣ Retour en arrière (méthode down)
+----------------------------------------------
+La méthode down() sert à annuler la migration.
+
+Exemple de logique :
+    Schema::dropIfExists('nom_de_la_table');
+
+👉 Très utile en cas d’erreur ou de changement
+de structure.
+
+----------------------------------------------
+6️⃣ Commandes Artisan liées aux migrations
+----------------------------------------------
+📌 Commandes principales :
+
+- php artisan
+    → Liste toutes les commandes disponibles
+
+- php artisan migrate
+    → Exécute toutes les migrations non lancées
+
+- php artisan migrate:rollback
+    → Annule la dernière migration exécutée
+
+
+    - php artisan migrate:rollback --step=1
+        → Annule une seule migration (la dernière)
+----------------------------------------------
+7️⃣ Créer une migration
+----------------------------------------------
+Pour créer une nouvelle migration :
+
+- php artisan make:migration create_nom_table
+
+👉 Laravel génère automatiquement :
+    - le nom du fichier
+    - la structure de base (up / down)
+
+- php artisan db:wipe
+    → Supprime toutes les tables de la BDD
+
+----------------------------------------------
+8️⃣ Astuce : la façade DB
+----------------------------------------------
+La façade DB permet d’interagir directement
+avec la base de données via des requêtes SQL.
+
+👉 Utile pour :
+    - requêtes complexes
+    - opérations ponctuelles
+    - tests rapides
+
+⚠️ Cependant :
+    - pour la structure de la base, on privilégie
+      toujours les migrations.
+
+----------------------------------------------
+✅ Résumé
+----------------------------------------------
+✔ Les migrations gèrent la structure de la BDD
+✔ up() applique les changements
+✔ down() annule les changements
+✔ Artisan permet de gérer facilement les migrations
+✔ Les migrations facilitent le travail en équipe
+
